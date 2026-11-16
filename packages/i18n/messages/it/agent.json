@@ -1,84 +1,5 @@
 {
     "untitledBox": "Box senza titolo",
-    "_context": {
-        "shareCta.planAdd": "Pulsante per aggiungere un coworker condiviso tramite link. {price} è il prezzo del piano mensile, ad esempio \"49 $\".",
-        "accessSummary.viaBox": "Un Box è un gruppo di coworker; {box} è il suo nome.",
-        "agentCard.destinations.memories": "Pulsante della scheda che apre ciò che il coworker sa (i suoi ricordi).",
-        "agentCard.destinations.monitoring": "Pulsante della scheda che apre l'attività e l'utilizzo del coworker.",
-        "agentCard.destinations.scheduled": "Pulsante della scheda che apre le attività programmate del coworker.",
-        "agentCard.share": "Pulsante: condividi questo coworker tramite link.",
-        "agentChatsList.filters.chats": "Chip filtro: thread avviati da una persona, a differenza delle esecuzioni automatizzate.",
-        "agentChatsList.filters.needs": "Chip filtro: thread in attesa della risposta dell'utente.",
-        "agentComputerThumbnail.computer": "Etichetta sopra l'anteprima dello schermo del computer virtuale del coworker.",
-        "agentLockedOverlay.saved": "Mostrato su un coworker in pausa o archiviato. Segue una seconda frase che spiega come ripristinarlo.",
-        "agentLockedOverlay.slot.activeCount": "Sotto il pulsante di upgrade: quanti coworker sono attivi rispetto al massimo del piano.",
-        "agentPanel.threads": "Pulsante che apre l'elenco dei thread di conversazione del coworker.",
-        "agentPanelLogs.input": "Etichetta sopra gli argomenti JSON con cui è stato richiamato uno strumento.",
-        "agentPanelLogs.tokensShort": "Abbreviazione di token, in una riga compatta.",
-        "agentPanelMcp.appBadge": "Badge su un server MCP fornito da un'app installata.",
-        "agentPanelMemories.dormant": "Badge su un ricordo che il coworker non richiama più da solo.",
-        "agentPanelMemories.form.kindPlaceholder": "Categoria a testo libero di un ricordo; mantieni le minuscole.",
-        "agentPanelMemories.form.tagsPlaceholder": "Campo tag: valori separati da virgola.",
-        "agentPanelMemories.recalled": "{query} è ciò che l'utente ha cercato.",
-        "agentPanelMonitoring.ranges.24h.short": "Etichetta breve di un pulsante intervallo (24 ore).",
-        "agentPanelScheduled.editor.testRun": "Pulsante: esegui l'attività programmata una volta ora, per testarla.",
-        "agentPanelServices.account": "Pulsante su un'app a pagamento installata: apre la scelta dell'account collegato all'app.",
-        "agentPanelServices.uninstallLabeled": "{label} è il nome che l'utente ha dato a questo account dell'app (ad es. Lavoro).",
-        "agentPanelSettings.soul.label": "L'anima è il prompt di sistema del coworker, le sue istruzioni di base.",
-        "agentPanelSetup.intro": "Mostrato all'autore di un template coworker, sopra le istruzioni di installazione.",
-        "agentPanelSkills.appBadge": "Badge su una skill fornita da un'app collegata.",
-        "agentPanelSkills.newSkill": "Pulsante che crea una nuova skill.",
-        "agentPanelSkills.upload": "Pulsante che apre un menu per importare skill da file.",
-        "agentPanelTools.capabilities.self.label": "Capacità assegnabile al coworker: migliorare le proprie istruzioni e configurazione.",
-        "agentPanelTriggers.paused": "Badge in minuscolo su un trigger disabilitato.",
-        "agentPanelTriggers.summary": "{methods} elenca i metodi HTTP (POST, GET/POST). {count} indica quante volte è stato chiamato l'URL del trigger.",
-        "agentSetupFields.needsSetup.label": "Domanda sì/no posta a un autore di template.",
-        "agentSheetChat.replyPlaceholder": "Segnaposto del compositore dentro un thread; {title} è il titolo del thread.",
-        "agentSheetChat.startedBy": "Banner su una conversazione avviata da un altro coworker; {name} è quel coworker.",
-        "agentTabs.actions.label": "Scheda che elenca le conversazioni in attesa dell'utente (domanda, approvazione).",
-        "agentTabs.memories.label": "Scheda di ciò che il coworker ha imparato e ricorda.",
-        "agentTabs.scheduled.label": "Scheda delle attività ricorrenti che il coworker esegue secondo programmazione.",
-        "agentTabs.services.label": "Scheda delle app di terze parti (Gmail, Slack...) collegate al coworker.",
-        "agentTabs.setup.label": "Scheda in cui l'autore del template scrive cosa succede all'installazione.",
-        "agentTabs.tools.label": "Scheda delle capacità integrate attivabili dall'utente (ricerca web, browser...).",
-        "agentView.tabs.scheduled": "Scheda che elenca le attività programmate (routine) del coworker.",
-        "agentView.tabs.settings": "Scheda impostazioni del coworker con le opzioni generali (nome, modello...).",
-        "agentView.views.data": "Schermata del coworker che mostra le tabelle del database.",
-        "mcpServerEditor.argumentsHelperEditable": "{token} è la sintassi segnaposto letterale ${NAME}, da lasciare invariata.",
-        "mcpServerEditor.nameHelper": "{prefix}_{tool} mostra come sono composti i nomi degli strumenti: {prefix} è il nome del server, {tool} è il segnaposto letterale <tool>.",
-        "mcpServerEditor.secretWarning": "{token} è la sintassi segnaposto letterale ${NAME}, da lasciare invariata.",
-        "mcpVariableToken.statusEngine": "Badge: la variabile ha un valore dall'ambiente dell'engine.",
-        "modelPickerProviders.connect": "Pulsante a fine riga: coworker questo abbonamento IA.",
-        "modelPickerProviders.sections.api": "Intestazione di un elenco di provider collegati con chiave API.",
-        "modelSelector.defaultLabel": "Pillola selettore modello quando il coworker segue il modello predefinito del workspace. {model} è un nome modello.",
-        "modelSelector.loading": "Pillola selettore modello mentre i modelli caricano.",
-        "modelSelector.refused": "Nel compositore chat quando l'abbonamento IA rifiuta il modello scelto. {model} è un nome modello, {reason} un motivo in inglese dal provider.",
-        "modelsShared.boxManageReason": "Tooltip su controllo disabilitato: la persona non ha i diritti sul Box (gruppo di coworker) che contiene questo coworker.",
-        "modelTierRow.pro": "Badge su un modello disponibile solo con il piano Pro a pagamento.",
-        "openChatsTabs.general": "Scheda della conversazione principale del coworker, sempre aperta.",
-        "planLimitHint.credit.usedUpOn": "I crediti mensili Rerun sono esauriti. {date} è una data breve, ad es. \"12 nov\".",
-        "planLimitHint.paused": "Badge: i crediti Rerun sono in pausa.",
-        "planLimitHint.windowResets": "{name} è una finestra di utilizzo (Sessione, Settimanale...), {percent} come 42%, {when} un tempo relativo come \"tra 5 min\" o una data breve.",
-        "planLimitHint.windows.fiveHour": "Nome della finestra di utilizzo rolling di cinque ore di un abbonamento IA.",
-        "planLimitHint.windows.modelWeekly": "Finestra di utilizzo settimanale di una famiglia di modelli. {label} è il nome della famiglia (ad es. Opus).",
-        "planLimitHint.windows.session": "Finestra di utilizzo di un abbonamento IA: la sessione corrente.",
-        "shareAgentDialog.carried.database": "{size} è una dimensione come 2,4 MB.",
-        "shareAgentDialog.packing": "Etichetta pulsante mentre si crea il link di condivisione.",
-        "sharedLinksSection.added": "Quante volte qualcuno ha aggiunto una copia del coworker tramite questo link.",
-        "skillEditor.namePlaceholder": "Esempio di nome skill.",
-        "skillEditor.procedure": "Etichetta del campo con le istruzioni passo passo della skill.",
-        "skillFilesSection.add": "Pulsante che conferma l'aggiunta di un file.",
-        "taskOutcomeFooter.done": "Badge: l'ultima esecuzione dell'attività è andata a buon fine.",
-        "taskOutcomeFooter.lastRun": "{time} è una durata breve, ad es. 5m, 3h, 2g.",
-        "templateContentLock.title": "Sopra il contenuto di un coworker installato da template, nascosto finché il workspace non paga.",
-        "threadBranch.opener.askedBy": "Sostituisce il primo messaggio di un thread richiesto da un altro coworker. {name} è il nome di quel coworker.",
-        "threadBranch.opener.schedule": "Sostituisce il primo messaggio di un thread avviato da una programmazione. {name} è il nome della routine.",
-        "threadBranch.opener.trigger": "Sostituisce il primo messaggio di un thread avviato da un webhook. {name} è il nome del trigger.",
-        "schedule.once": "Descrizione di un'attività eseguita una sola volta. {date} è data e ora formattate.",
-        "schedule.everyMinutes": "{count} è un numero di minuti, ad esempio 15.",
-        "schedule.everyWeekday": "{day} è un giorno della settimana, ad es. lunedì; {time} un orario, ad es. 9:00.",
-        "schedule.monthly": "{day} è un giorno del mese, un numero come 1 o 15; {time} un orario."
-    },
     "agentCard": {
         "destinations": {
             "services": "Apps",
@@ -115,7 +36,8 @@
         "emptyThreads": "Ancora nessun thread.",
         "emptyAutomations": "Ancora nessuna operazione automatizzata.",
         "running": "In corso",
-        "startedBy": "Iniziato da {name}"
+        "startedBy": "Iniziato da {name}",
+        "moreFor": "Más opciones de {title}"
     },
     "agentComputerThumbnail": {
         "working": "Al lavoro sul computer",
@@ -154,8 +76,14 @@
     },
     "openChatsTabs": {
         "closeTab": "Chiudi {title}",
+        "closeTabMenu": "Cerrar pestaña",
         "newThread": "Nuovo filo",
         "general": "Generale"
+    },
+    "sessionRename": {
+        "rename": "Renombrar",
+        "label": "Nome de la conversazione",
+        "failed": "Non è stato possibile renombrar. Riprova."
     },
     "threadBranch": {
         "needs": "Ti serve",
@@ -194,7 +122,16 @@
         "uninstallDescription": "Il coworker perde questo servizio e i suoi strumenti. La sua connessione viene revocata, quindi reinstallare significa connettersi di nuovo.",
         "uninstallAction": "Disinstallare",
         "requestHint": "Stai ancora cercando? Possiamo aggiungere l'app di cui hai bisogno.",
-        "requestApp": "Richiedi un app"
+        "requestApp": "Richiedi un app",
+        "vaultBadge": "Vault",
+        "fromVault": "Desde el Vault",
+        "vaultAdd": "Aggiungi",
+        "vaultShared": "Tutti los coworkers la reciben del Vault. Cámbiala allí.",
+        "vaultRemove": "Rimuovi {name} de questo coworker",
+        "vaultRemoveConfirm": "Rimuovi {name} de questo coworker?",
+        "vaultRemoveDescription": "Sigue en el Vault, per los otros coworkers y per más adelante.",
+        "vaultRemoveAction": "Rimuovi",
+        "vaultAttachFailed": "Non è stato possibile añadir {name}"
     },
     "agentPanelMcp": {
         "unreachableTitle": "Motore non raggiungibile",
@@ -547,9 +484,6 @@
         "connected": "Collegato",
         "manage": "Gestione delle connessioni"
     },
-    "modelTierRow": {
-        "pro": "Pro"
-    },
     "runModelField": {
         "label": "Modello",
         "placeholder": "Seleziona un modello",
@@ -598,14 +532,7 @@
         "create": "Creare abilità",
         "saveFailed": "Impossibile salvare",
         "downloadFailed": "Non è riuscito a scaricare abilità",
-        "deleteFailed": "Impossibile eliminare",
-        "locks": {
-            "edit": "Modificare questa abilità si sblocca una volta che lo spazio di lavoro è su un piano pagato.",
-            "delete": "Cancellare questa abilità si sblocca una volta che lo spazio di lavoro è su un piano pagato.",
-            "download": "Scaricando questa abilità si sblocca una volta che lo spazio di lavoro è su un piano pagato.",
-            "addFile": "Aggiungendo un file in bundle si sblocca una volta che lo spazio di lavoro è su un piano pagato.",
-            "deleteFile": "Cancellare un file in bundle sblocca una volta che lo spazio di lavoro è su un piano pagato."
-        }
+        "deleteFailed": "Impossibile eliminare"
     },
     "skillFileEditor": {
         "readFailed": "Non poteva leggere questo file",
@@ -615,11 +542,7 @@
         "delete": "Cancella file",
         "deleteTitle": "Elimina {path}?",
         "deleteDescription": "Il file viene rimosso dall'abilità. Questo non può essere annullato.",
-        "saveChanges": "Salvare le modifiche",
-        "locks": {
-            "edit": "Modificare questo file si sblocca una volta che lo spazio di lavoro è su un piano pagato.",
-            "delete": "Cancellare questo file si sblocca una volta che lo spazio di lavoro è su un piano pagato."
-        }
+        "saveChanges": "Salvare le modifiche"
     },
     "skillFilesSection": {
         "label": "File Bundled",
@@ -842,17 +765,6 @@
     "agentPanel": {
         "threads": "Thread",
         "coworkerCard": "Scheda del coworker"
-    },
-    "templateContentLock": {
-        "title": "Bloccato mentre sei al processo",
-        "description": {
-            "skills": "Questo coworker è venuto da un modello. Le sue competenze si sblocca una volta che il tuo spazio di lavoro è su un piano pagato.",
-            "systemPrompt": "Questo coworker è venuto da un modello. Il suo sistema si sblocca una volta che lo spazio di lavoro è su un piano pagato.",
-            "taskPrompts": "Questo coworker è venuto da un modello. Il suo compito si sblocca una volta che lo spazio di lavoro è su un piano pagato.",
-            "triggerPrompts": "Questo coworker è venuto da un modello. Il suo trigger si sblocca una volta che lo spazio di lavoro è su un piano pagato.",
-            "referenceFiles": "Questo coworker è venuto da un modello. I suoi file di riferimento si sblocca una volta che lo spazio di lavoro è su un piano pagato."
-        },
-        "upgrade": "Aggiornamento per sbloccare"
     },
     "agentAccessRow": {
         "label": "Accesso",

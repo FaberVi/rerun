@@ -1,6 +1,7 @@
 {
     "actions": {
         "notNow": "Non ora",
+        "explain": "Explicar",
         "skip": "Salta",
         "connect": "Collega",
         "connecting": "Connessione…",
@@ -65,7 +66,12 @@
         "selectAll": "Seleziona tutte le opzioni che valgono",
         "typeAnswer": "Scrivi la risposta…",
         "somethingElse": "Altro",
-        "yourAnswer": "La tua risposta"
+        "yourAnswer": "La tua risposta",
+        "record": "Responder con tu voz",
+        "useRecording": "Usar esta grabación",
+        "discardRecording": "Descartar la grabación",
+        "retryRecording": "Riprova la transcripción",
+        "uploadFailed": "Non se pudieron adjuntar esos file. Riprova."
     },
     "secret": {
         "labelOne": "Credenziale richiesta",

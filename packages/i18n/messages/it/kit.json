@@ -6,6 +6,7 @@
             "previous": "Approvazione precedente",
             "next": "Approvazione successiva",
             "decline": "Non ora",
+            "explain": "Explicar",
             "approve": "Approva",
             "approved": "Approvato"
         },
@@ -108,7 +109,6 @@
     },
     "experts": {
         "wizard": {
-            "step": "Passaggio {step}",
             "steps": {
                 "identity": {
                     "title": "La tua identità",
@@ -345,6 +345,7 @@
         "noUpdates": "Nessun aggiornamento",
         "pillLabel": "Notifiche: {summary}",
         "pillLabelEmpty": "Notifiche: nessun aggiornamento",
+        "needsYouRow": "Te necesita",
         "needsYouCount": "{count, plural, one {# ti serve} other {# ti servono}}",
         "doneCount": "{count, plural, one {# completata} other {# completate}}",
         "needsYouRich": "{count, plural, one {<b>#</b> ti serve} other {<b>#</b> ti servono}}",

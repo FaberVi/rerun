@@ -1,11 +1,4 @@
 {
-    "_context": {
-        "hub.count": "Small label above the grid of feature cards on the features hub.",
-        "page.faqTitle": "{crumb} is the short name of the feature, as in the breadcrumb (e.g. \"Computer use\").",
-        "stage.job": "Job title of the example Coworker shown on a name plate in the animated demo.",
-        "stage.shift": "When that example Coworker runs, shown under its job title.",
-        "items.tools.title": "{count} is the number of connected apps (3,000)."
-    },
     "hub": {
         "name": "Funzionalità",
         "metaTitle": "Funzionalità: tutto ciò che include un Coworker IA",

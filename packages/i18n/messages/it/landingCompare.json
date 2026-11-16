@@ -1956,13 +1956,5 @@
                 "weeklyReport": "Scrivi il report settimanale"
             }
         }
-    },
-    "_context": {
-        "vs": "{competitor} è un nome prodotto (Zapier, n8n, Claude Cowork...). \"vs\" resta com'è.",
-        "page.reviewed": "<time> avvolge il mese e l'anno in cui i fatti sono stati verificati, ad es. \"ottobre 2026\".",
-        "grid.caption": "Didascalia screen reader della tabella di confronto. {criteria} è l'elenco delle etichette di riga, in minuscolo e separate da virgole.",
-        "competitors": "I fatti su ogni competitor (prezzi, limiti, nomi dei piani) sono stati verificati sulle pagine ufficiali: traduci le parole, mantieni ogni numero, valuta e nome di prodotto o piano com'è scritto. {price} è il prezzo mensile di Rerun, già formattato (\"$49\"); {connectors} è il numero di app (\"3,000\"); {templates} è il numero di agenti pronti.",
-        "pages": "Una pagina di confronto per competitor. Stessa regola: mantieni ogni numero, valuta, prodotto e nome piano; {price}, {connectors} e {templates} come in `competitors`. Il verdetto e le risposte FAQ sono citati dai motori di ricerca: restano frasi complete.",
-        "howItWorks.job.findLeads.meta": "Una pianificazione mostrata su una scheda attività piccola: tienila molto breve."
     }
 }

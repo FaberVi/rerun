@@ -29,7 +29,8 @@
         "working": "Al lavoro",
         "workingOn": "Al lavoro · {detail}",
         "asleep": "Inattivo",
-        "asleepAbout": "Inattivo · {about}"
+        "asleepAbout": "Inattivo · {about}",
+        "you": "Tu: {message}"
     },
     "foreman": {
         "askAnything": "Chiedi qualsiasi cosa"

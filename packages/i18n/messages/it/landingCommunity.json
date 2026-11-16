@@ -1,20 +1,4 @@
 {
-    "_context": {
-        "directory.eyebrow": "Shown next to a row of expert faces at the top of the experts directory.",
-        "directory.featured.carousel": "Accessible name of the carousel, read by screen readers inside the carousel arrow buttons (Previous / Next).",
-        "filters.skills": "Options of the Skill filter of the experts directory: the fields an AI automation expert works in. Keep RAG, MCP, APIs and CRM as they are.",
-        "filters.segment": "Screen reader label of a filter button: the filter name, then the value picked or the word for 'any'.",
-        "card.hire": "Button on an expert card that opens a form to contact the expert.",
-        "hire": "Dialog where a visitor sends a project request to an expert. {name} is the expert's name or studio name.",
-        "program.hero.title": "The empty mark tag is replaced by the Rerun logo, placed right before the word Rerun.",
-        "program.showcase.carousel": "Accessible name of the carousel, read by screen readers inside the carousel arrow buttons (Previous / Next).",
-        "program.valueProps.cells.ship.desc": "connectorCount is an already formatted number such as 1,000.",
-        "visuals": "Mock content played in animated demos of the product: coworker names (Jules, Margo, Sam, Nora, Leo), companies and emails stay as they are.",
-        "visuals.memory.files": "Unit shown right after an animated number of files attached to a skill.",
-        "visuals.memory.cards.invoiceChasing.lines": "Lines of a markdown document: keep the leading markers (##, 1., -) exactly.",
-        "visuals.triggers.status.triggered": "Lowercase status badge on an automation card.",
-        "visuals.monitor.status.subtitle": "Number of coworkers working right now."
-    },
     "metadata": {
         "layout": {
             "title": "Esperti",

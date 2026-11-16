@@ -59,21 +59,33 @@
             "synthesis": "Mettiamo tutto insieme…"
         },
         "cards": {
-            "identity": { "title": "Ti abbiamo trovato" },
-            "audience": { "title": "A chi vendi" },
-            "tools": { "title": "Strumenti individuati" },
+            "identity": {
+                "title": "Ti abbiamo trovato"
+            },
+            "audience": {
+                "title": "A chi vendi"
+            },
+            "tools": {
+                "title": "Strumenti individuati"
+            },
             "mail": {
                 "title": "La tua casella",
                 "runsOn": "L'email passa da <b>{provider}</b>"
             },
-            "social": { "title": "Dove comparete" },
-            "brand": { "title": "Il tuo brand" },
+            "social": {
+                "title": "Dove comparete"
+            },
+            "brand": {
+                "title": "Il tuo brand"
+            },
             "registry": {
                 "title": "Sulla carta",
                 "since": "Dal <b>{year}</b>",
                 "people": "<b>{headcount}</b> persone"
             },
-            "person": { "title": "Sei tu, {firstName}?" },
+            "person": {
+                "title": "Sei tu, {firstName}?"
+            },
             "linkedin": {
                 "title": "La tua pagina LinkedIn",
                 "followers": "follower",
@@ -83,9 +95,15 @@
                 "title": "Cosa dicono i clienti",
                 "count": "<n>{count}</n> recensioni Google"
             },
-            "products": { "title": "Cosa vendi" },
-            "competitors": { "title": "Con chi competi" },
-            "customers": { "title": "Chi compra già" },
+            "products": {
+                "title": "Cosa vendi"
+            },
+            "competitors": {
+                "title": "Con chi competi"
+            },
+            "customers": {
+                "title": "Chi compra già"
+            },
             "brain": {
                 "title": "Company Brain",
                 "pages": "{count, plural, one {# pagina} other {# pagine}} che i tuoi agenti leggono prima di iniziare",

@@ -1,0 +1,113 @@
+{
+    "menu": {
+        "app": {
+            "about": "Acerca de {name}",
+            "hide": "Ocultar {name}",
+            "hideOthers": "Ocultar otros",
+            "showAll": "Mostrar todo",
+            "quit": "Salir de {name}",
+            "checkForUpdates": "Cerca actualizaciones…",
+            "changeServer": "Cambiar de server…"
+        },
+        "file": {
+            "title": "File",
+            "closeWindow": "Cerrar ventana",
+            "newWindow": "Nueva ventana"
+        },
+        "edit": {
+            "title": "Edición",
+            "undo": "Deshacer",
+            "redo": "Rehacer",
+            "cut": "Cortar",
+            "copy": "Copiar",
+            "paste": "Pegar",
+            "pasteAndMatchStyle": "Pegar con el mismo estilo",
+            "delete": "Elimina",
+            "selectAll": "Seleccionar todo",
+            "find": "Cerca…"
+        },
+        "view": {
+            "title": "Ver",
+            "reload": "Recargar",
+            "forceReload": "Forzar recarga",
+            "toggleDevTools": "Herramientas de desarrollo",
+            "actualSize": "Tamaño real",
+            "zoomIn": "Acercar",
+            "zoomOut": "Alejar",
+            "toggleFullScreen": "Pantalla completa"
+        },
+        "window": {
+            "title": "Ventana",
+            "minimize": "Minimizar",
+            "zoom": "Zoom",
+            "front": "Traer todo al frente"
+        },
+        "help": {
+            "title": "Ayuda",
+            "docs": "Documentación"
+        }
+    },
+    "offline": {
+        "title": "Non se puede connettir con Rerun",
+        "body": "Controlla tu conexión. La app vuelve a connettirse a {host} sola.",
+        "unavailable": "{host} non responde in questo momento. La app lo vuelve a intentar sola.",
+        "retry": "Riprova"
+    },
+    "incompatible": {
+        "title": "Actualiza Rerun per continua",
+        "body": "Esta versión de la app è demasiado antigua per {host}.",
+        "download": "Scarica la última versión",
+        "downloading": "Descaricamento la actualización… {percent} %",
+        "restart": "Reiniciar per actualizar"
+    },
+    "unload": {
+        "message": "Salir de esta pagina?",
+        "detail": "Un coworker sigue trabajando o un file tiene cambios senza salvar.",
+        "leave": "Salir",
+        "stay": "Quedarme"
+    },
+    "find": {
+        "placeholder": "Cerca en la pagina",
+        "matches": "{active} de {total}",
+        "noMatches": "Sin resultados",
+        "previous": "Resultado anterior",
+        "next": "Resultado siguiente",
+        "close": "Cerrar"
+    },
+    "server": {
+        "title": "Conéctate a tu server",
+        "description": "Escribe la dirección del server Rerun que usas.",
+        "label": "Dirección del server",
+        "connect": "Connetti",
+        "invalid": "Escribe una dirección como rerun.example.com.",
+        "unreachable": "Niente responde en esta dirección.",
+        "notRerun": "Esta dirección non è un server Rerun.",
+        "tooOld": "Este server necesita la versión {version} de la app o una posterior.",
+        "insecure": "Esta dirección non è cifrada. Usa https:// salvo que el server esté en esta computadora.",
+        "useRerunCloud": "Usar Rerun Cloud",
+        "cancel": "Annulla"
+    },
+    "updates": {
+        "upToDate": "Estás al día",
+        "upToDateDetail": "Rerun {version} è la última versión.",
+        "failed": "Non se pudieron cerca actualizaciones",
+        "readyToInstall": "Rerun {version} è listo per installase",
+        "readyDetail": "La app se reinicia per terminar la actualización.",
+        "restartNow": "Reiniciar ora",
+        "later": "Più tarde"
+    },
+    "tray": {
+        "open": "Abrir {name}",
+        "waiting": "{count, plural, one {# te espera} other {# te esperan}}",
+        "openAtLogin": "Abrir al iniciar sesión",
+        "stillRunning": "{name} sigue funcionando aquí. Ciérralo da este icono.",
+        "quickAsk": "Domanda rápida"
+    },
+    "context": {
+        "addToDictionary": "Aggiungi al diccionario",
+        "openLink": "Abrir enlace en el navegador",
+        "copyLink": "Copiar enlace",
+        "copyImage": "Copiar imagen",
+        "saveImage": "Salvar imagen"
+    }
+}

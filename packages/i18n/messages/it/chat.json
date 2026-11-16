@@ -212,6 +212,8 @@
         "sendFailed": "Impossibile inviare quella registrazione.",
         "sendFailedHint": "Riprova o eliminala.",
         "waitingForMicrophone": "In attesa del microfono...",
+        "microphone": "Micrófono...",
+        "transcribing": "Transcribiendo...",
         "hideTranscript": "Nascondi trascrizione",
         "transcript": "Trascrizione",
         "copyTranscript": "Copia trascrizione",
@@ -363,7 +365,8 @@
         "reconnect": {
             "title": "Ricollega",
             "cta": "Ricollega",
-            "description": "Accedi di nuovo alla connessione su cui gira questo coworker."
+            "description": "Accedi di nuovo alla connessione su cui gira questo coworker.",
+            "descriptionReplaceKey": "Pega la nueva clave en la conexión que usa questo coworker."
         }
     },
     "budget": {
@@ -410,6 +413,9 @@
         "lifetime": {
             "ownConnection": "Il piano a vita usa la tua IA e il piano {plan} è collegato.",
             "connectProvider": "Il piano a vita usa la tua IA. Collega Claude o ChatGPT per far continuare a lavorare i coworker.",
+            "apiKeyTitle": "Usar una clave de API",
+            "apiKeyDescription": "Anthropic, OpenAI, Google, OpenRouter o un endpoint personalizado.",
+            "apiKeyCta": "Aggiungi una clave",
             "body": "Il piano a vita usa la tua IA.",
             "connectTitle": "Collega la tua IA",
             "connectDescription": "Claude, ChatGPT o una chiave API.",

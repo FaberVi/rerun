@@ -24,6 +24,17 @@
                 "waiting_human": "In attesa"
             }
         },
+        "peek": {
+            "close": "Cerrar",
+            "openConversation": "Abrir conversazione",
+            "showMore": "Mostra altro",
+            "showLess": "Mostra meno",
+            "sent": "Inviato a {agent}",
+            "stale": "Esta solicitud ya tiene risposta.",
+            "openToAnswer": "Apri la conversazione per responder.",
+            "busy": "{agent} ancora è trabajando. Riprova en un momento.",
+            "failed": "Tu risposta non se envió. Riprova."
+        },
         "markAll": {
             "title": "Segnare tutto come letto?",
             "description": "{count, plural, one {# elemento} other {# elementi}} lasceranno questo elenco. Anche le richieste in attesa di risposta verranno cancellate, senza essere evase.",

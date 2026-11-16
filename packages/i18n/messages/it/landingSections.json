@@ -556,23 +556,5 @@
                 }
             }
         }
-    },
-    "_context": {
-        "jobs": "Job titles of AI Coworkers shown on tiles and labels of a product mockup. Keep them short.",
-        "plan.routines.items": "Rows of the Routines tab in a product mockup. `badge` is a short pill: a countdown, an hour, a day or a date. Times stay on 24 hours.",
-        "steps.title": "<br></br> is a forced line break between the two halves of the title.",
-        "steps.hire.mark": "Must be copied word for word from steps.hire.job: the product underlines this part of the sentence.",
-        "steps.board.beats": "Chat bubbles above Coworkers in an animated board. Keep each under 30 characters.",
-        "layer.gainTitles": "Section titles split in pieces: the Rerun logo is drawn between `lead` and `mid`, and a line break falls before `tail`.",
-        "layer.live.plan": "Plan line under the workspace name in a product menu.",
-        "testimonials.title": "<keep> keeps its words on one line; <chip> is a small animated badge around the word Coworkers.",
-        "testimonials.role": "The person's job title and their company: {role} and {company} stay in English. No space before <org>, the design adds it.",
-        "faq.items.experts.link": "The word of the answer that links to the experts page: must appear word for word in the answer.",
-        "faq.items.tools.answer": "{connectors} is a number such as 3,000.",
-        "faq.items.billing.answer": "{price} is the monthly price, already formatted in US dollars.",
-        "foreman.powers.voice.detail": "<kbd> draws the key as a keycap.",
-        "foreman.voice.running": "A status line while the assistant runs its 'Message Coworker' tool.",
-        "foreman.partner.running": "A status line while the assistant runs its 'Create Coworker' tool.",
-        "foreman.autopilot.name": "The name of the feature, on a switch."
     }
 }

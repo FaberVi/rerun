@@ -122,7 +122,10 @@
         "skipped": "Saltata.",
         "skip": "Salta",
         "finish": "Fine",
-        "nextApp": "App successiva"
+        "nextApp": "App successiva",
+        "fromVault": "Ya en el Vault",
+        "useAccount": "Usar {label}",
+        "connectNew": "Account nueva"
     },
     "signInPopup": {
         "connecting": "Connessione a {name}…"

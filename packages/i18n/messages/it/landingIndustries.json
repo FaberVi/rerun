@@ -1,9 +1,4 @@
 {
-    "_context": {
-        "page.faqTitle": "{industry} is the industry name as in its breadcrumb (e.g. Agenzie, Legalee e compliance).",
-        "page.breadcrumbLabel": "aria-label of the breadcrumb navigation.",
-        "industries.agencies.templatesLink": "Link to the English-only template library category; the category name may be translated."
-    },
     "hub": {
         "eyebrow": "Settori",
         "title": "Coworker IA per il tuo settore",

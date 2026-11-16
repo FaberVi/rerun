@@ -160,6 +160,8 @@
         "main": "Principale",
         "starOnGithub": "Metti una stella su GitHub",
         "login": "Accedi",
+        "download": "Scarica",
+        "openWebApp": "Abrir la app web",
         "browseAll": {
             "label": "Sfoglia tutti i template",
             "description": "L'intera libreria, ogni categoria in una pagina."
@@ -259,11 +261,6 @@
         },
         "cookieSettings": "Impostazioni cookie"
     },
-    "languageBanner": {
-        "offer": "Questa pagina è disponibile in italiano.",
-        "open": "Leggi in italiano",
-        "dismiss": "Chiudi"
-    },
     "discord": "Entra nel nostro Discord",
     "tabNudge": {
         "firstCoworker": "3 min al tuo primo coworker",
@@ -308,14 +305,5 @@
             "cta": "Vedi il confronto"
         }
     },
-    "composerPlaceholder": "Invia un messaggio...",
-    "_context": {
-        "nav.logo": "Menu aperto con clic destro sul logo Rerun nella barra superiore.",
-        "nav.goToApp": "Pulsante in alto al posto di quello di registrazione per un visitatore già connesso all'app.",
-        "nav.trialCta": "Il prezzo resta in dollari USA in ogni lingua.",
-        "finalCta.titleLead": "<switch></switch> è una pillola rotante con il provider IA (ChatGPT, Claude...). Il titolo è in due righe: titleLead e titleTail.",
-        "openSource.announce": "<wide> avvolge la parte nascosta su schermi piccoli.",
-        "languageBanner.offer": "Mostrato a un visitatore la cui lingua del browser è questa, sulla versione inglese di una pagina. Ogni lingua lo dice con le proprie parole.",
-        "og.default.line1": "La card social del sito (immagine 1200x630): tre righe brevi, l'ultima evidenziata. Tieni ogni riga corta."
-    }
+    "composerPlaceholder": "Invia un messaggio..."
 }

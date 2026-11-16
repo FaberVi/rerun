@@ -1,19 +1,4 @@
 {
-    "_context": {
-        "cases.quoted": "A customer quote wrapped in this language's quotation marks (French: « {quote} »).",
-        "hero.title.lead": "First line of the home H1. <chip> wraps the word drawn as a rotating avatar pill; <keep> keeps its content on one line. Keep both tags around the same words.",
-        "hero.pillLeads.jobs": "Read glued to a job title on a pill: \"Hire a | Sales\". The job pills (hero.tiles.*.pill) must read naturally after it.",
-        "hero.pillLeads.tasks": "Read glued to a task on a pill: \"Hire a Coworker to | Find new clients\".",
-        "hero.tiles": "Job titles written on small isometric tiles of a demo board: 20 characters at most.",
-        "hero.handoffs": "Short message one Coworker tile says to its neighbour on the demo board.",
-        "hero.sources.router": "Followed by the OpenRouter logo and name, drawn by <router></router>.",
-        "coworker.tools.gmail": "A fake Gmail inbox shown in a demo. Use the labels Gmail shows in this language.",
-        "coworker.tools.gmail.typed1": "Typed letter by letter in a fixed-width window: 43 characters at most.",
-        "coworker.tools.gmail.typed2": "Typed letter by letter in a fixed-width window: 33 characters at most.",
-        "coworker.always.place": "Where the Coworker's machine runs: a box id, then a city and its country.",
-        "hero.screen": "A demo of the product playing inside a screen on the home page: Coworkers on a board, their chat threads, an inbox, the Chief of Staff. Names of companies and people are fictional and stay as they are.",
-        "hero.screen.foreman": "{writer}, {social}, {research}, {invoices} are Coworker job titles (hero.tiles.*.job) used as names: \"the Content Marketer\"."
-    },
     "hero": {
         "title": {
             "lead": "Assumi <keep><chip>Coworker</chip> IA</keep>",

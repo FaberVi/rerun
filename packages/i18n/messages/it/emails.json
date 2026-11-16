@@ -40,6 +40,7 @@
     "subjects": {
         "signInCode": "Il tuo codice Rerun: {code}",
         "publishedAccessCode": "Il tuo codice per aprire {pageTitle}: {code}",
+        "lifetimeCode": "Tu código vitalicio de Rerun: {code}",
         "workspaceInvite": "Sei invitato in {workspaceName} su Rerun",
         "runFailed": "{agentName} ha avuto un errore",
         "agentDone": "{agentName} ha completato un'attività",
@@ -90,6 +91,13 @@
         "body": "{workspaceName} ha condiviso questa pagina con te. Inserisci questo codice sulla pagina per aprirla.",
         "footnote": "Il codice scade tra {minutes, plural, one {# minuto} other {# minuti}} e funziona una sola volta. Se non l'hai richiesto, puoi ignorare questa email.",
         "untitledPage": "una pagina"
+    },
+    "lifetimeCode": {
+        "preview": "Tu código vitalicio de Rerun è {code}",
+        "heading": "Tu acceso vitalicio è listo",
+        "body": "Gracias por tu compra. Aquí hai tu código: canjéalo en il tuo workspace de Rerun per pasarlo al plan vitalicio.",
+        "button": "Canjear mi código",
+        "footnote": "El código funciona una sola vez, en un solo workspace. Salva este email: è tu comprobante de compra. Dudas? Responde a este email."
     },
     "workspaceInvite": {
         "preview": "Sei invitato in {workspaceName} su Rerun",

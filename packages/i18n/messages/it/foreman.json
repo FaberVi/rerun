@@ -15,7 +15,18 @@
             "float": "Fluttuante"
         },
         "signIn": "Accedi",
-        "newTask": "Nuova attività"
+        "newTask": "Nuova attività",
+        "conversations": "Conversazioni"
+    },
+    "threads": {
+        "general": "General",
+        "back": "Volver a General",
+        "untitled": "Nueva tarea"
+    },
+    "history": {
+        "title": "Conversazioni",
+        "close": "Cerrar",
+        "empty": "Aún non c'è hilos."
     },
     "resize": "Ridimensiona la chat",
     "modelPill": {
@@ -118,7 +129,8 @@
         },
         "settingUp": "Configurazione di <highlight>{title}</highlight>",
         "website": {
-            "label": "Sito aziendale"
+            "label": "Sito aziendale",
+            "platform": "{domain} non è el sitio de tu empresa. Escribe el tuyo, u omite este passaggio."
         },
         "industry": {
             "label": "Settore",

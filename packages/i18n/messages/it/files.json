@@ -21,7 +21,6 @@
     },
     "editor": {
         "unsaved": "Non salvato",
-        "close": "Chiudi editor",
         "cancel": "Annulla",
         "noChanges": "Nessuna modifica da salvare",
         "save": "Salva modifiche",
