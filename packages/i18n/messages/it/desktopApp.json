@@ -101,7 +101,8 @@
         "waiting": "{count, plural, one {# te espera} other {# te esperan}}",
         "openAtLogin": "Abrir al iniciar sesión",
         "stillRunning": "{name} sigue funcionando aquí. Ciérralo da este icono.",
-        "quickAsk": "Domanda rápida"
+        "quickAsk": "Domanda rápida",
+        "quickAskVoice": "Domanda rapida vocale"
     },
     "context": {
         "addToDictionary": "Aggiungi al diccionario",
@@ -109,5 +110,19 @@
         "copyLink": "Copiar enlace",
         "copyImage": "Copiar imagen",
         "saveImage": "Salvar imagen"
+    },
+    "computer": {
+        "defaultName": "Il mio computer",
+        "chooseFolder": "Scegli la cartella in cui lavorano i coworker",
+        "trayOnline": "Questo computer: online",
+        "trayOffline": "Questo computer: offline",
+        "trayPaused": "Questo computer: in pausa",
+        "trayJobs": "{count, plural, one {Questo computer: # attività in esecuzione} other {Questo computer: # attività in esecuzione}}",
+        "pause": "Metti in pausa i coworker su questo computer",
+        "resume": "Riprendi i coworker su questo computer",
+        "quitWithJobs": "{count, plural, one {Un'attività di un coworker è in esecuzione su questo computer} other {# attività di coworker sono in esecuzione su questo computer}}",
+        "quitWithJobsDetail": "Uscire da Rerun la interromperà. Chiudi la finestra per mantenerla in esecuzione.",
+        "quitAnyway": "Esci comunque",
+        "keepRunning": "Mantieni in esecuzione"
     }
 }

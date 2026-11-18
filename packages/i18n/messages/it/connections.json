@@ -163,7 +163,8 @@
         "saveConnectionFailed": "Impossibile salvare la connessione",
         "codeExpired": "Il codice è scaduto, ricomincia",
         "deleteFailed": "Impossibile eliminare la connessione",
-        "defaultFailed": "Impossibile cambiare il modello predefinito"
+        "defaultFailed": "Impossibile cambiare il modello predefinito",
+        "backupsFailed": "Impossibile salvare i modelli di backup"
     },
     "addProvider": {
         "addKey": "Aggiungi key"
@@ -243,6 +244,7 @@
         "adminOnly": "Solo un admin può cambiare i provider AI",
         "groups": {
             "default": "Modello predefinito",
+            "backups": "Backup",
             "included": "Incluso",
             "plans": "I tuoi abbonamenti",
             "keys": "Le tue API key",
@@ -267,6 +269,20 @@
             "stopped": "I coworker senza modello proprio sono fermi. Sistema {source} o scegli un altro modello.",
             "noOtherModel": "Nessun altro modello è pronto. Aggiungi prima un piano o una API key.",
             "change": "Cambia"
+        },
+        "backups": {
+            "add": "Aggiungi backup",
+            "rank": "{rank, selectordinal, other {#º}} · via {source}",
+            "rankNotReady": "{rank, selectordinal, other {#º}} · {source} non è pronto, ignorato",
+            "moveUp": "Sposta {model} su",
+            "moveDown": "Sposta {model} giù",
+            "remove": "Rimuovi {model}",
+            "full": "Fino a {max} backup",
+            "noneLeft": "Nessun altro modello è pronto. Aggiungi prima un piano o una chiave API.",
+            "credit": {
+                "title": "Credito Rerun come ultima risorsa",
+                "description": "Solo quando ogni piano è esaurito"
+            }
         },
         "addSubscription": "Aggiungi abbonamento",
         "addApiKey": "Aggiungi API key"

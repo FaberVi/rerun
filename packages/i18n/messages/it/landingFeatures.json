@@ -28,7 +28,7 @@
             "crumb": "Coworkers",
             "title": "Assumi un Coworker IA, non scrivere un prompt.",
             "lede": "Dagli un compito, le app che gli servono e un orario. Lavora con i tuoi strumenti e ti fa sapere cosa ha fatto: niente diagramma da disegnare, niente prompt da progettare.",
-            "metaTitle": "Coworker IA: assumi un agente invece di costruire un workflow",
+            "metaTitle": "Coworker IA: assumi un agente senza creare workflow",
             "metaDescription": "Un Coworker Rerun riceve un compito, le tue app e un orario, poi lavora con i tuoi strumenti e ti fa sapere cosa ha fatto. Niente diagramma, niente prompt da progettare.",
             "stageCaption": "Due Coworker al lavoro nella stessa Box, che raccontano cosa hanno appena fatto.",
             "points": {
@@ -65,7 +65,7 @@
             "crumb": "Manager dei coworker",
             "title": "Un manager per ogni Coworker che assumi.",
             "lede": "Rerun gestisce il tuo workspace: conosce ogni Coworker, assume quelli che ti mancano e inoltra ogni richiesta a chi se ne occupa. Parlagli a voce, o lascialo in Autopilot mentre non ci sei.",
-            "metaTitle": "Coworker manager: guida il tuo team IA a voce o in Autopilot",
+            "metaTitle": "Coworker Manager: guida il team IA a voce o in Autopilot",
             "metaDescription": "Rerun gestisce il tuo workspace: assume i Coworker che ti servono, inoltra ogni richiesta a quello giusto, ascolta quando tieni premuto Spazio e gira in Autopilot.",
             "stageCaption": "Tieni premuto Spazio e di' cosa ti serve: il manager lo passa al Coworker che se ne occupa.",
             "points": {
@@ -119,7 +119,7 @@
             "crumb": "Uso del computer",
             "title": "Ogni Coworker lavora sul proprio schermo.",
             "lede": "Se un'app non ha API, il tuo Coworker la apre sul proprio schermo e ci clicca come farebbe una persona. Puoi guardarlo lavorare e riprendere il mouse quando vuoi.",
-            "metaTitle": "Computer use: un agente IA che clicca nelle tue app",
+            "metaTitle": "Computer Use: un agente IA che clicca nelle tue app",
             "metaDescription": "Il tuo Coworker apre un browser reale sul proprio schermo e clicca nei portali senza API. Guardalo in diretta e riprendi il mouse quando vuoi.",
             "stageCaption": "Un browser reale, sullo schermo del Coworker, con il tuo account collegato.",
             "points": {
@@ -156,7 +156,7 @@
             "crumb": "Strumenti",
             "title": "Connesso in modo nativo a {count, number}+ strumenti.",
             "lede": "Gmail, Slack, Stripe, HubSpot, Notion, Shopify e qualsiasi server MCP che gli indichi. Un clic per connettere, e il tuo Coworker lo usa alla prossima esecuzione. Nessun progetto di integrazione, nessun costo extra.",
-            "metaTitle": "{count, number}+ strumenti e integrazioni, inclusi nel piano",
+            "metaTitle": "{count, number}+ tool e integrazioni, inclusi nel piano",
             "metaDescription": "I tuoi Coworker raggiungono Gmail, Slack, Stripe, HubSpot, Shopify e altri {count, number}+ strumenti, più qualsiasi server MCP. Un clic per connettere, senza costi extra.",
             "stageCaption": "Le app che un Coworker può aprire e gli altri {count, number}+ a cui arriva oltre.",
             "points": {
@@ -193,7 +193,7 @@
             "crumb": "Validazione umana",
             "title": "Autonomo, finché non serve un sì.",
             "lede": "Il tuo Coworker lavora da solo e si ferma prima di qualsiasi cosa importante: un pagamento, un invio, una cancellazione. Chiede, aspetta, e chiunque nel team può rispondere.",
-            "metaTitle": "Human in the loop: il tuo agente IA chiede prima di agire",
+            "metaTitle": "Human in the Loop: l'agente IA chiede prima di agire",
             "metaDescription": "Un Coworker Rerun lavora da solo e si ferma prima di qualsiasi cosa importante. Chiede, aspetta un sì, e chiunque nel team può rispondere.",
             "stageCaption": "Un Coworker che si ferma a metà esecuzione, chiede e aspetta che qualcuno risponda.",
             "points": {
@@ -267,7 +267,7 @@
             "crumb": "Secondo cervello",
             "title": "Un secondo cervello per la tua azienda.",
             "lede": "I tuoi Coworker leggono le stesse pagine: cosa vendi, a chi vendi, come scrivi. Le tengono aggiornate e ogni esecuzione parte da lì.",
-            "metaTitle": "Un secondo cervello che i tuoi Coworker IA leggono prima di ogni esecuzione",
+            "metaTitle": "Un secondo cervello letto dai Coworker a ogni esecuzione",
             "metaDescription": "La tua offerta, il tuo mercato, il tuo tono e le tue regole, scritti una volta in pagine che legge ogni Coworker. Le aggiornano, così smetti di incollare contesto.",
             "stageCaption": "Le pagine che leggono i tuoi Coworker e le fonti da cui le aggiornano.",
             "points": {
@@ -304,7 +304,7 @@
             "crumb": "Workspaces",
             "title": "Un account, un workspace per business.",
             "lede": "Un cliente, un brand, un progetto personale: ciascuno ha il proprio workspace, i propri Coworker, le proprie app connesse e il proprio cervello. Cambia dalla pill nell'angolo.",
-            "metaTitle": "Workspaces: tieni separati business, cliente o brand",
+            "metaTitle": "Workspace: separa ogni attività, cliente o brand",
             "metaDescription": "Un account Rerun può avere tutti i workspace che ti servono: ciascuno con i propri Coworker, le proprie app e il proprio cervello. Niente passa da uno all'altro.",
             "stageCaption": "Il selettore: ogni business su un account, nessuno mescolato.",
             "points": {
@@ -341,7 +341,7 @@
             "crumb": "Tutto il team",
             "title": "Invita tutto il team, senza costi extra.",
             "lede": "I posti sono gratuiti. Tutti vedono la stessa board, parlano con gli stessi Coworker e possono rispondere quando uno chiede un sì.",
-            "metaTitle": "Invita tutto il team: posti gratuiti in ogni piano",
+            "metaTitle": "Invita tutto il team: utenti gratis in ogni piano",
             "metaDescription": "Rerun non addebita per posto. Invita tutti, lavorate sulla stessa board, parlate con gli stessi Coworker e lascia che risponda chi c'è.",
             "stageCaption": "La stessa board, gli stessi Coworker, più persone insieme.",
             "points": {
@@ -378,7 +378,7 @@
             "crumb": "In collaborazione",
             "title": "I tuoi Coworker si passano il lavoro.",
             "lede": "Uno trova i lead, il successivo gli scrive, un terzo li archivia nel CRM. Nessuno copia nulla tra loro e leggi tutta la catena in un solo posto.",
-            "metaTitle": "Coworker IA che si passano il lavoro",
+            "metaTitle": "Coworker IA che collaborano tra loro",
             "metaDescription": "Un Coworker trova i lead, il successivo gli scrive, un terzo li archivia nel CRM. Si passano il lavoro direttamente e lasciano una sola conversazione leggibile.",
             "stageCaption": "Tre Coworker che passano lo stesso lavoro di mano in mano.",
             "points": {

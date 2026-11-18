@@ -570,7 +570,8 @@
     },
     "paidApp": {
         "slotAdded": "Slot aggiunto al piano.",
-        "slotAddedTrial": "Slot aggiunto, {price} durante la prova."
+        "slotAddedTrial": "Slot aggiunto, {price} durante la prova.",
+        "slotRemoved": "Slot restituito. Rimane utilizzabile fino al prossimo rinnovo."
     },
     "linkedinPro": {
         "description": "Gli account LinkedIn con cui agiscono i coworker.",

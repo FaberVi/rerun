@@ -128,6 +128,32 @@
             "checkoutFootnote": "Pagas en una pagina segura de Stripe y luego vuelves aquí."
         }
     },
+    "lifetime": {
+        "badge": "Lifetime",
+        "title": "Rerun Lifetime",
+        "subtitle": "Coworker illimitati · paghi una volta, tuo per sempre",
+        "appsDescription": "Superpoteri extra per i tuoi coworker, fatturati mensilmente a parte rispetto all'offerta lifetime.",
+        "overview": {
+            "deal": "Offerta lifetime",
+            "paidOnce": "Pagamento unico",
+            "apps": "App",
+            "aiProviders": "Provider IA"
+        },
+        "slots": {
+            "oneOnCheckout": "Uno slot con il primo pagamento, aggiungine altri subito dopo",
+            "oneDuringTrial": "Uno slot per app durante la prova gratuita",
+            "slotLine": "{count, plural, one {# slot {provider}} other {# slot {provider}}}",
+            "freeThen": "Gratis per {days} giorni, poi {price}",
+            "monthlyBill": "App, mensile",
+            "billedToday": "Addebitato oggi per quanto resta del mese, poi mensilmente con gli altri tuoi slot.",
+            "freeDuringTrial": "Gratis fino al termine della prova, poi fatturato mensilmente.",
+            "continueToPayment": "Continua con il pagamento",
+            "confirm": "Conferma",
+            "addedTitle": "Slot aggiunti",
+            "addedBody": "Collega un account nell'app per metterli al lavoro.",
+            "scheduledBody": "Gli slot che hai restituito rimangono utilizzabili fino al {date}, poi non saranno più fatturati."
+        }
+    },
     "apps": {
         "title": "Apps",
         "description": "Superpoteri extra per i tuoi coworker, sulla stessa fattura del tuo piano.",
@@ -445,13 +471,17 @@
             "autopilot": "<b>Autopilot</b> per il tuo business",
             "trial": {
                 "agents": "<b>{count} coworker</b> durante la prova, illimitati con Pro",
-                "teammates": "Invita <b>il tuo team</b> quando parte Pro",
+                "teammates": "Invita <b>il tuo team</b> fin dal primo giorno",
                 "credit": "<b>{credits, plural, one {# credito} other {# crediti}} di utilizzo AI</b>, poi {monthly, number} al mese"
             },
             "pro": {
                 "agents": "<b>Coworker illimitati</b> al lavoro",
                 "teammates": "Invita <b>tutto il tuo team</b>",
                 "credit": "<b>{credits, plural, one {# credito} other {# crediti}} di utilizzo AI</b> al mese"
+            },
+            "lifetime": {
+                "ownAi": "Funziona con <b>la tua IA</b>",
+                "credit": "<b>Crediti Rerun</b> quando ne hai bisogno"
             }
         },
         "plan": {
@@ -473,7 +503,13 @@
             "remove": "Rimuovi il codice promozionale"
         },
         "backToPlan": "Piano",
-        "terms": "Accetto i <terms>Termini</terms> e chiedo a Rerun di avviare subito il servizio. Se sono un consumatore, il diritto di recesso termina una volta avviato il servizio."
+        "terms": "Accetto i <terms>Termini</terms> e chiedo a Rerun di avviare subito il servizio. Se sono un consumatore, il diritto di recesso termina una volta avviato il servizio.",
+        "lifetime": {
+            "title": "Offerta lifetime",
+            "line": "Coworker illimitati · pagamento unico",
+            "paidOnce": "Pagamento unico",
+            "forGood": "tuo per sempre"
+        }
     },
     "stripe": {
         "orPayWithCard": "o pagare con carta",

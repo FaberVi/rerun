@@ -73,6 +73,7 @@
         "mcp_login": "Accedi all'integrazione",
         "mcp_login_complete": "Completa l'accesso",
         "mcp_status": "Stato integrazione",
+        "mcp_search": "Trova strumenti",
         "card_table": "Mostra una tabella",
         "card_file": "Mostra un file",
         "image_generation": "Genera un'immagine",
@@ -150,7 +151,15 @@
         "request_takeover": "Ti ha chiesto di prendere il controllo del browser",
         "request_spend": "Ha chiesto di spendere crediti",
         "notify_user": "Ti ha avvisato",
-        "install_complete": "Ha completato la configurazione"
+        "install_complete": "Ha completato la configurazione",
+        "remote_computers": "Ha controllato i computer collegati",
+        "remote_exec": "{program, select, none {Ha eseguito un comando} other {Ha eseguito {program}}} su #{computer}",
+        "request_computer_access": "Ha chiesto di usare #{computer}",
+        "remote_job": "Ha controllato un'attività su #{computer}",
+        "remote_file_list": "Ha elencato i file su #{computer}",
+        "remote_file_read": "Ha letto un file su #{computer}",
+        "remote_file_write": "Ha scritto un file su #{computer}",
+        "remote_transfer": "Ha copiato un file con #{computer}"
     },
     "activities": {
         "shell_exec": "Esecuzione di un comando",
@@ -196,6 +205,7 @@
         "skill_create": "Creazione di una skill",
         "skill_edit": "Modifica di una skill",
         "skill_update": "Aggiornamento di una skill",
+        "mcp_search": "Ricerca di strumenti",
         "rerun_hub_service_search": "Ricerca app",
         "rerun_hub_service_install": "Installazione di un'app",
         "list_agents": "Consultazione del team",
@@ -208,7 +218,9 @@
         "analyze_website": "Lettura del sito web",
         "list_templates": "Esplorazione template",
         "propose_plan": "Scrittura del piano",
-        "install_template": "Installazione di un template"
+        "install_template": "Installazione di un template",
+        "remote_computers": "Controllo dei computer collegati",
+        "remote_exec": "{program, select, none {Esecuzione di un comando} other {Esecuzione di {program}}} su #{computer}"
     },
     "paidData": {
         "people": {

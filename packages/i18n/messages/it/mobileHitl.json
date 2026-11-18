@@ -24,7 +24,8 @@
         "service": "{count, plural, =0 {App da collegare} one {App da collegare} other {# app da collegare}}",
         "takeover": "Tocca a te sullo schermo",
         "jumpTo": "{label}, vai",
-        "spend": "Spesa da approvare"
+        "spend": "Spesa da approvare",
+        "computer": "Approva un comando su #{computer}"
     },
     "alert": {
         "label": "Notifica",
@@ -137,5 +138,17 @@
         "approveOnce": "Approva una volta",
         "addCredits": "Aggiungi credit",
         "alwaysAllowFailed": "Impossibile attivare «Spendi senza chiedere». Questa approvazione resta valida, fino alla stima."
+    },
+    "computer": {
+        "runOn": "Esegui su #{computer}",
+        "filesOn": "Usa i file su #{computer}",
+        "deny": "Rifiuta",
+        "allow": "Consenti",
+        "alwaysProgram": "Consenti sempre {program}",
+        "alwaysFolder": "Consenti sempre questa cartella",
+        "interpreterWarning": "Consentire sempre {program} consente qualsiasi codice venga eseguito",
+        "alwaysFailed": "Impossibile salvare la regola sul computer: consentito solo per questa volta.",
+        "inFolder": "In {folder}",
+        "folderNote": "“Consenti sempre” consente ogni file in {folder}"
     }
 }

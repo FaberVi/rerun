@@ -7,7 +7,10 @@
     "list": {
         "label": "Coworkers",
         "search": "Cerca",
-        "empty": "Aún non c'è coworkers"
+        "empty": "Aún non c'è coworkers",
+        "newBox": "Nuova Box",
+        "emptyBox": "Nessun coworker",
+        "boxMore": "Azioni per {name}"
     },
     "tile": {
         "more": "Más per {name}",
@@ -34,7 +37,8 @@
     },
     "foreman": {
         "name": "Chief of Staff",
-        "line": "Domanda lo que quieras"
+        "line": "Domanda lo que quieras",
+        "card": "Scheda Chief of Staff"
     },
     "details": {
         "label": "Ficha de {name}"

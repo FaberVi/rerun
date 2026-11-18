@@ -26,7 +26,8 @@
     },
     "mentions": {
         "coworkers": "coworker",
-        "skills": "Competenze"
+        "skills": "Competenze",
+        "computers": "Computer"
     },
     "paidSources": {
         "count": "{count, plural, one {# fonte} other {# fonti}}",
@@ -135,7 +136,8 @@
         "mcp": "È necessario l'accesso",
         "service": "{count, plural, =0 {App da collegare} one {App da collegare} other {# app da collegare}}",
         "takeover": "Il tuo turno sullo schermo",
-        "spend": "Spendere per approvare"
+        "spend": "Spendere per approvare",
+        "computer": "Approva un comando su #{computer}"
     },
     "pendingHitl": {
         "goTo": "{label}, vai ad esso"
@@ -174,6 +176,12 @@
         "done": "Contesto compattato",
         "summarized": "{count, plural, one {# messaggio precedente riassunto} other {# messaggi precedenti riassunti}}",
         "recovered": "~{tokens} token recuperati"
+    },
+    "providerSwitch": {
+        "limit": "Limite {plan} raggiunto · {model}",
+        "limitUntil": "Limite {plan} raggiunto · {model} fino alle {time}",
+        "limitUntilDate": "Limite {plan} raggiunto · {model} fino al {date}, {time}",
+        "back": "{plan} ripristinato. Di nuovo su {model}."
     },
     "scheduledRun": {
         "label": "Esecuzione programmata",
@@ -413,12 +421,14 @@
         "lifetime": {
             "ownConnection": "Il piano a vita usa la tua IA e il piano {plan} è collegato.",
             "connectProvider": "Il piano a vita usa la tua IA. Collega Claude o ChatGPT per far continuare a lavorare i coworker.",
+            "connectProviderWithClaude": "Il tuo piano lifetime funziona con la tua IA. Aggiungi una chiave API o collega Claude o ChatGPT per far continuare a lavorare i tuoi coworker.",
             "apiKeyTitle": "Usar una clave de API",
             "apiKeyDescription": "Anthropic, OpenAI, Google, OpenRouter o un endpoint personalizado.",
             "apiKeyCta": "Aggiungi una clave",
             "body": "Il piano a vita usa la tua IA.",
             "connectTitle": "Collega la tua IA",
             "connectDescription": "Claude, ChatGPT o una chiave API.",
+            "connectDescriptionWithClaude": "Una chiave API, Claude o ChatGPT.",
             "connectCta": "Collega"
         },
         "trial": {
@@ -480,6 +490,11 @@
             "secret": "Hai rifiutato di condividere le chiavi",
             "mcp": "Hai saltato l'accesso",
             "takeover": "Hai lasciato il browser al coworker"
+        },
+        "computer": {
+            "allowed": "Consentito su <computer></computer>",
+            "always": "Sempre consentito {rule} su <computer></computer>",
+            "denied": "Rifiutato su <computer></computer>"
         }
     },
     "agentChat": {
@@ -518,5 +533,39 @@
             "notNow": "Non adesso",
             "ofTotal": "/{amount} {count, plural, one {credit} other {credits}}"
         }
+    },
+    "computerAccess": {
+        "titleCommand": "Esegui un comando su <computer></computer>",
+        "titleCommands": "Esegui {count} comandi su <computer></computer>",
+        "titleScreen": "Usa lo schermo di <computer></computer>",
+        "deny": "Rifiuta",
+        "allow": "Consenti",
+        "alwaysAllow": "Consenti sempre {program}",
+        "interpreterWarning": "Consentire sempre {program} consente qualsiasi codice venga eseguito",
+        "alwaysFailed": "Impossibile salvare la regola sul computer: consentito solo per questa volta.",
+        "titleFiles": "{count, plural, one {Usa un file su <computer></computer>} other {Usa # file su <computer></computer>}}",
+        "alwaysAllowFolder": "Consenti sempre questa cartella",
+        "folderNote": "“Consenti sempre” consente ogni file in {folder}",
+        "inFolder": "In {folder}"
+    },
+    "computerJob": {
+        "state": {
+            "running": "In esecuzione",
+            "succeeded": "Completata",
+            "failed": "Non riuscita",
+            "stopped": "Interrotta",
+            "lost": "Persa",
+            "offline": "Computer offline",
+            "gone": "Non disponibile"
+        },
+        "stop": "Interrompi",
+        "offlineNote": "Continua a essere eseguita lì. Il coworker riceverà aggiornamenti quando il computer tornerà online.",
+        "lostNote": "Rerun è stato chiuso sul computer durante l'esecuzione.",
+        "goneNote": "Questa attività non può più essere letta: il computer è stato rimosso o non la riconosce più."
+    },
+    "jobEnd": {
+        "label": "Attività terminata su <computer>#{handle}</computer>",
+        "viewReport": "Visualizza report",
+        "reportTitle": "Cosa ha riportato #{computer}"
     }
 }

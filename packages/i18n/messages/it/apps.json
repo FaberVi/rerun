@@ -11,13 +11,17 @@
         "notSubscribed": "Abbonati prima a Rerun",
         "paused": "Il workspace è in pausa",
         "trialSlot": "Una prova occupa uno slot {provider}. Passa a un piano superiore per aggiungerne.",
+        "lifetimeTrialSlot": "La tua prova gratuita include uno slot {provider}. Aggiungine altri al termine della prova.",
         "adminOnly": "Solo un admin può gestire le app a pagamento"
     },
     "slots": {
         "footer": "<b>{used} di {total, plural, one {# slot} other {# slot}} usati</b>, {description}",
         "subscriberTrial": "il primo gratis fino al {date}, poi {price}",
         "workspaceTrial": "0 $ durante la prova, fatturato con il piano dopo",
-        "paid": "{price} ciascuno, fatturato con il piano"
+        "paid": "{price} ciascuno, fatturato con il piano",
+        "lifetime": "{price} ciascuno, con fatturazione mensile",
+        "lifetimeTrial": "gratis durante la prova, poi {price} ciascuno",
+        "lifetimeEnding": "scadono il {date}"
     },
     "offer": {
         "subscriberTrial": {
@@ -28,13 +32,21 @@
             "headline": "0 $ durante la prova",
             "detail": "Poi {price} per account, fatturato con il piano"
         },
+        "lifetimeTrial": {
+            "detail": "Poi {price} per account, con fatturazione mensile"
+        },
         "freeSlot": {
             "headline": "Uno slot ti aspetta",
-            "detail": "È già nel tuo piano"
+            "detail": "È già nel tuo piano",
+            "detailLifetime": "Già incluso nei tuoi slot mensili",
+            "detailLifetimeEnding": "I tuoi slot scadono il {date}"
         },
         "buySlot": {
             "headline": "{price} per profilo collegato",
             "detail": "Aggiunto al piano, addebitato oggi per il resto del periodo"
+        },
+        "lifetimeSlot": {
+            "detail": "Fatturato mensilmente, separato dal tuo piano lifetime"
         }
     },
     "connectHint": {
@@ -46,8 +58,10 @@
     "addSlot": {
         "title": "Aggiungere uno slot {provider}?",
         "description": "{price} viene aggiunto al piano. Oggi paghi quanto resta del periodo in corso.",
+        "descriptionLifetime": "{price} viene aggiunto ai tuoi slot mensili. Oggi ti viene addebitato quanto resta del mese.",
         "confirm": "Aggiungi slot",
-        "button": "Aggiungi uno slot"
+        "button": "Aggiungi uno slot",
+        "startTrial": "Inizia la prova gratuita"
     },
     "intro": {
         "connect": "Collega {provider}"
@@ -94,6 +108,7 @@
         },
         "addAnother": "Aggiungi un altro account",
         "addAnotherHint": "Aggiunge uno slot a {price} al piano",
+        "addAnotherHintLifetime": "Aggiunge uno slot a {price}",
         "status": {
             "connected": "Pronto",
             "needsReconnect": "Accedi di nuovo",
@@ -114,8 +129,12 @@
         "disconnectLabel": "Scollega {name}",
         "disconnectTitle": "Scollegare {name}?",
         "disconnectDescription": "I coworker perdono subito gli strumenti {provider}. Lo slot resta nel piano finché non lo rimuovi da Fatturazione.",
+        "disconnectDescriptionLifetime": "I suoi coworker perdono subito gli strumenti {provider}. Lo slot rimane tuo finché non lo restituisci qui.",
         "disconnect": "Scollega",
-        "disconnectTooltip": "Scollega questo account"
+        "disconnectTooltip": "Scollega questo account",
+        "giveBack": "Restituisci",
+        "giveBackTitle": "Restituire questo slot {provider}?",
+        "giveBackDescription": "Non verrà più fatturato dal prossimo rinnovo e rimarrà utilizzabile fino ad allora."
     },
     "success": {
         "connectedIcon": "{provider} collegato",

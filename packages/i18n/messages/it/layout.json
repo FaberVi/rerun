@@ -105,6 +105,7 @@
         "aiProviders": "Provider AI",
         "vault": "Vault",
         "vaultSignedOut": "Una app del Vault è disconnetteda",
+        "computers": "Computer",
         "servers": "Server",
         "billing": "Fatturazione",
         "newWorkspace": "Nuovo workspace",
