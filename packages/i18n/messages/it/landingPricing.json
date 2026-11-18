@@ -2,7 +2,7 @@
     "seo": {
         "title": "Prezzi",
         "headline": "Un piano. Tutto incluso.",
-        "description": "Un piano Rerun da {price} al mese: agenti illimitati, posti illimitati, la tua macchina privata, ogni app ed esecuzioni illimitate. Prova gratuita di {trialDays} giorni.",
+        "description": "Un piano Rerun da {price}/mese: agenti e utenti illimitati, macchina privata, ogni app ed esecuzioni illimitate. Prova gratis di {trialDays} giorni.",
         "breadcrumbHome": "Pagina iniziale"
     },
     "hero": {

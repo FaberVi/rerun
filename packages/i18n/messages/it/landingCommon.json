@@ -1,7 +1,7 @@
 {
     "site": {
-        "title": "Rerun: dipendenti IA che girano sul tuo piano ChatGPT o Claude",
-        "description": "Assumi dipendenti IA per vendite, supporto, marketing e amministrazione. Girano sul tuo piano ChatGPT o Claude, con Credit inclusi o la tua API key. Prova gratuita di {trialDays} giorni."
+        "title": "Rerun: dipendenti IA sul tuo piano ChatGPT o Claude",
+        "description": "Assumi dipendenti IA per vendite, supporto e marketing. Usano ChatGPT o Claude, crediti o la tua API key. Prova gratuita di {trialDays} giorni."
     },
     "nav": {
         "items": {
