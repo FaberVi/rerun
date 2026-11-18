@@ -198,11 +198,6 @@
             "title": "Il tuo piano non potrebbe essere caricato",
             "description": "Stripe non ha risposto. Il tuo abbonamento è intatto, riprovate in un momento.",
             "retry": "Riprova"
-        },
-        "lifetime": {
-            "title": "Piano lifetime",
-            "description": "Paghi una volta, è tuo per sempre. Coworker e posti illimitati, sul tuo AI.",
-            "connectAi": "Coworker il tuo AI"
         }
     },
     "postPayment": {

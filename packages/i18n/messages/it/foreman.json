@@ -1,9 +1,7 @@
 {
     "welcome": {
         "title": "Pronto a delegare la prima attività?",
-        "preparing": "Preparazione del workspace in corso...",
-        "gateTitle": "Il team è pronto per essere creato",
-        "gateSubtitle": "Crea il tuo account e il Chief of Staff inizia a costruirlo subito."
+        "preparing": "Preparazione del workspace in corso..."
     },
     "header": {
         "closeDisabled": "Completa la configurazione per chiudere la chat",
@@ -14,7 +12,6 @@
             "dockRight": "Aggancia a destra",
             "float": "Fluttuante"
         },
-        "signIn": "Accedi",
         "newTask": "Nuova attività",
         "conversations": "Conversazioni"
     },
@@ -31,19 +28,6 @@
     "resize": "Ridimensiona la chat",
     "modelPill": {
         "hubReason": "Questa chat gira sempre su Rerun Balanced"
-    },
-    "signupGate": {
-        "teamAt": "Il tuo team su {domain}",
-        "team": "Il tuo team",
-        "perks": {
-            "trial": "Prova gratuita di {days} giorni",
-            "cancel": "Annulla quando vuoi",
-            "kept": "Le tue risposte restano salvate"
-        },
-        "createAccount": "Crea il mio account"
-    },
-    "signInLink": {
-        "prompt": "Hai già un account? <link>Accedi</link>"
     },
     "nextSteps": {
         "turnOn": "Attiva il mio coworker",
@@ -108,60 +92,6 @@
     },
     "ownEntry": "So cosa mi serve",
     "ownEntryPlaceholder": "So cosa mi serve…",
-    "intake": {
-        "steps": {
-            "company": {
-                "title": "Qual è il sito della tua azienda?",
-                "description": "Lo leggiamo per capire cosa vendi e a chi."
-            },
-            "industry": {
-                "title": "In che settore lavori?",
-                "description": "Decide quali team mettiamo sulla tua board."
-            },
-            "role": {
-                "title": "E cosa fai lì?",
-                "description": "Decide chi costruiamo per te per primo."
-            },
-            "name": {
-                "title": "Ultima cosa: il tuo nome?",
-                "description": "Così non parliamo con un workspace."
-            }
-        },
-        "settingUp": "Configurazione di <highlight>{title}</highlight>",
-        "website": {
-            "label": "Sito aziendale",
-            "platform": "{domain} non è el sitio de tu empresa. Escribe el tuyo, u omite este passaggio."
-        },
-        "industry": {
-            "label": "Settore",
-            "other": "Altro",
-            "placeholder": "Panetteria, studio dentistico, palestra…"
-        },
-        "industries": {
-            "agencies": "Agenzie",
-            "ecommerce": "E-commerce",
-            "saas": "SaaS",
-            "sales": "Vendite",
-            "recruiting": "Selezione del personale",
-            "real-estate": "Immobiliare",
-            "legal": "Legale e compliance",
-            "creators": "Creator",
-            "productivity": "Produttività",
-            "other": "Altro"
-        },
-        "role": {
-            "label": "Il tuo ruolo",
-            "placeholder": "Responsabile crescita"
-        },
-        "name": {
-            "label": "Nome",
-            "placeholder": "Mario"
-        },
-        "skip": "Salta",
-        "next": "Avanti",
-        "answerToContinue": "Rispondi a questo passaggio per continuare",
-        "saveFailed": "Non siamo riusciti a salvare. Riprova."
-    },
     "gettingStarted": {
         "title": "Primi passi",
         "hide": "Nascondi",
