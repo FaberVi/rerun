@@ -548,7 +548,7 @@
         "points": {
             "archived": {
                 "label": "Archiviato dopo 30 giorni senza uso",
-                "description": "Un sandbox tiene accesa una macchina, quindi uno che nessuno apre la libera."
+                "description": "Un sandbox mantiene accesa una macchina, quindi uno che nessuno apre la libera."
             },
             "kept": {
                 "label": "Non è stato buttato via nulla",
@@ -605,7 +605,7 @@
     },
     "subscriptionOffer": {
         "title": "Fai girare i coworker sul tuo piano Claude o ChatGPT",
-        "titleWithoutClaude": "Haz que tus coworkers funcionen con tu plan de ChatGPT o una clave de API",
+        "titleWithoutClaude": "Fai funzionare i tuoi coworker con il tuo piano ChatGPT o con una chiave API",
         "back": "Indietro",
         "connect": "Connetti",
         "or": "oppure",
@@ -621,8 +621,8 @@
         "offer": {
             "title": "Rerun funziona meglio con il tuo abbonamento Claude o ChatGPT",
             "description": "Collegalo e i coworker girano sul piano che paghi già.",
-            "titleWithoutClaude": "Tus coworkers funcionan con tu propia IA",
-            "descriptionWithoutClaude": "Connetti tu plan de ChatGPT o una clave de API, y tus coworkers funcionan con ella."
+            "titleWithoutClaude": "I tuoi coworker funzionano con la tua IA",
+            "descriptionWithoutClaude": "Collega il tuo piano ChatGPT o una chiave API e i tuoi coworker funzioneranno con quella."
         },
         "arguments": {
             "ownPlan": {
@@ -675,7 +675,7 @@
     },
     "boxPicker": {
         "title": "Scegli una Box",
-        "description": "El nuevo coworker se une a ella, en un lugar libre.",
+        "description": "Il nuovo coworker entra nella Box, in un posto libero.",
         "coworkers": "{count, plural, =0 {Aún non c'è coworkers} one {# coworker} other {# coworkers}}"
     }
 }

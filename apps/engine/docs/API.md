@@ -63,7 +63,7 @@ version the folder is at against the one this build takes it to.
   "activeRuns": 1,
   "claimedSessions": 1,
   "desktopViewers": 0,
-  "capabilities": ["files.stream", "foreman.files", "foreman.coworker", "schedules.rename", "update.artifact", "connections.opencode", "connections.custom", "vault", "desktop"],
+  "capabilities": ["files.stream", "foreman.files", "foreman.coworker", "schedules.rename", "update.artifact", "connections.opencode", "connections.custom", "vault", "vault.rename", "desktop"],
   "commit": "e70322d",
   "startedAt": "2026-11-16T09:12:03.512Z",
   "layout": "release",
@@ -78,7 +78,8 @@ version the folder is at against the one this build takes it to.
   connections.
 - `capabilities`: `files.stream` (`PUT .../files/raw`), `foreman.files` (the Chief of Staff's file
   routes), `foreman.coworker` (its memories, skills, routines and connectors, and the routes for them), `schedules.rename` (a schedule `PATCH` takes `name`), `update.artifact` (`POST /update`
-  takes a prebuilt artifact), `connections.opencode`, `connections.custom`, `vault`, and `desktop`
+  takes a prebuilt artifact), `connections.opencode`, `connections.custom`, `vault`, `vault.rename` (a
+  Vault item takes `customLabel`), and `desktop`
   only when the desktop packages are installed.
 - `commit` is the short commit of the build, `null` when unknown. `layout` is `release`,
   `monorepo` or `image`. `lastUpdate` is what the last `rerun update` did (`status` `running`,
@@ -216,8 +217,8 @@ not. A ticket without a mode drives. A bad ticket answers `401`, any other upgra
 
 A person links a computer to the workspace from the desktop app; the coworkers then run commands,
 jobs and file operations on it. The computer is never an engine: it opens one WebSocket to this one
-and answers what it is asked. These routes answer `404` until linked computers are switched on
-(`RERUN_REMOTE_COMPUTERS=on`, or the release).
+and answers what it is asked. These routes answer `404` on an engine started with
+`RERUN_REMOTE_COMPUTERS=off`.
 
 ### `GET /remote/computers`
 
@@ -1172,15 +1173,20 @@ slug is lowercase kebab-case, at most 64 characters (`400` otherwise). `type` is
 `offering`, `market`, `team`, `voice`, `stack`, `priorities` (the identity card, one page each) or
 `customer`, `competitor`, `person`, `product`, `decision`, `note`.
 
+Every page and every file of the shared folder can be filed: free `tags` (lowercase, `#` and spaces
+dropped, at most 20), the `spaceId` of the Box it belongs to (`null` for the whole workspace) and
+`createdBy`, who first put it in the Brain, which later edits never change. A page a coworker
+creates is filed under that coworker's Box, as the app last sent it (`PUT /brain/agent-boxes`).
+
 ### `GET /brain/pages`
 
-`{ "pages": [ { "slug", "title", "type", "hash", "updatedAt", "updatedBy" } ] }`
+`{ "pages": [ { "slug", "title", "type", "hash", "updatedAt", "updatedBy", "tags", "createdBy", "spaceId" } ] }`
 
 ### `GET /brain/pages/:slug`
 
 ```json
 {
-  "page": { "slug": "pricing", "title": "Pricing", "type": "offering", "hash": "...", "updatedAt": "...", "updatedBy": "user:...", "content": "...", "sources": [], "unconfirmed": [], "links": ["acme"], "backlinks": [{ "slug": "company", "title": "Company" }] },
+  "page": { "slug": "pricing", "title": "Pricing", "type": "offering", "hash": "...", "updatedAt": "...", "updatedBy": "user:...", "tags": ["pricing"], "createdBy": "agent:scout", "spaceId": null, "content": "...", "sources": [], "unconfirmed": [], "links": ["acme"], "backlinks": [{ "slug": "company", "title": "Company" }] },
   "revisions": [ { "id": "...", "slug": "pricing", "title": "Pricing", "hash": "...", "author": "user:...", "proposalId": null, "createdAt": "..." } ]
 }
 ```
@@ -1198,6 +1204,33 @@ otherwise: `409` when the page moved since, or no longer exists.
 ```
 
 Answers the page, as `GET`. `content` is at most 60,000 characters.
+
+### `PATCH /brain/pages/:slug/meta`
+
+`{ "tags": ["acme"], "spaceId": "<box id>" }` files the page: what is sent replaces what it had, what
+is left out stays. Moves neither the hash nor the history. Answers the page, `404` for an unknown page.
+
+### `GET /brain/files/meta` · `PUT /brain/files/meta`
+
+How the files and folders of the shared folder are filed, by path:
+`{ "files": [ { "path": "brand-kit/logo.svg", "kind": "file", "tags": ["brand"], "createdBy": "user:...", "spaceId": "...", "createdAt": "..." } ] }`,
+`kind` being `file` or `dir`. A path whose file is not there is left out, and forgotten after a day.
+A path outside the shared folder is ignored.
+
+`PUT` files up to 1,000 paths at once, the batch of an import, and answers the same list:
+
+```json
+{ "paths": ["brand-kit", "brand-kit/logo.svg"], "tags": ["brand"], "spaceId": "<box id>", "author": "user:..." }
+```
+
+`tags` and `spaceId` replace what a path had when they are sent; `author` becomes the creator of the
+paths not filed yet. Moving or deleting a file through `/shared/files` carries its filing along, and
+a file a coworker writes with `shared_write` is filed under its Box with the coworker as creator.
+
+### `PUT /brain/agent-boxes`
+
+`{ "boxes": { "<agent id>": "<box id>" } }`: the Box each coworker sits in, sent whole by the app.
+A coworker left out sits in no Box. `{ "ok": true }`.
 
 ### `DELETE /brain/pages/:slug`
 
@@ -1223,7 +1256,7 @@ The changes coworkers proposed with `brain_propose`, optionally `?status=propose
 and the count of open ones (`{ "count": 2 }`).
 
 ```json
-{ "proposals": [ { "id": "...", "agentId": "...", "agentName": "scout", "sessionId": "...", "slug": "acme", "mode": "edit", "title": "Acme", "headline": "Acme moved to Lyon", "highlights": [{ "label": "City", "before": "Paris", "after": "Lyon" }], "type": "customer", "content": "...", "reason": "...", "sources": [], "baseHash": "...", "status": "proposed", "outdated": false, "currentContent": "...", "createdAt": "...", "decidedAt": null, "decidedBy": null } ] }
+{ "proposals": [ { "id": "...", "agentId": "...", "agentName": "scout", "sessionId": "...", "slug": "acme", "mode": "edit", "title": "Acme", "headline": "Acme moved to Lyon", "highlights": [{ "label": "City", "before": "Paris", "after": "Lyon" }], "type": "customer", "content": "...", "reason": "...", "sources": [], "baseHash": "...", "tags": ["acme"], "status": "proposed", "outdated": false, "currentContent": "...", "createdAt": "...", "decidedAt": null, "decidedBy": null } ] }
 ```
 
 `outdated` is true when the page moved since the coworker read it.
@@ -1513,6 +1546,12 @@ are the variables an item holds, `tokens` the servers holding an OAuth token.
 Kinds: `service` (a catalog app, `slug` set), `mcp` (a custom MCP server), `secret` (variables only).
 Statuses: `active`, `needs_auth`, `needs_config`.
 
+`label` tells an account from the other ones of its app: the ordinal given to an extra account
+(`Gmail 2`), or what its sign-in reported (an email, a workspace name), which every sign-in writes
+again. `customLabel` (1 to 60 characters) is the name a person gave the account: only a `PATCH`
+writes it, no sign-in touches it, and where both are set it is the one shown and the one the model
+reads (`account Acme org`).
+
 ### `GET /vault`
 
 `?agent=<id>` narrows the list to the items that coworker draws on, its own and the shared ones.
@@ -1560,7 +1599,8 @@ One item, as in the list. `404` when it does not exist.
 
 ### `PATCH /vault/:id`
 
-Change anything but the kind, the attachments and the secrets: `slug`, `name`, `label`, `status`,
+Change anything but the kind, the attachments and the secrets: `slug`, `name`, `label`,
+`customLabel`, `status`,
 `authMethodId`, `config`, `mcpServers`, `skills`, `oauth`, `managed`, `composio`, `app`,
 `sharedWithAll`. `null` removes an optional field. Answers the item.
 

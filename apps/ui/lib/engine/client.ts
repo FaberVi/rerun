@@ -15,6 +15,7 @@ import {
     ENGINE_CAPABILITY_FOREMAN_FILES,
     ENGINE_CAPABILITY_SCHEDULE_RENAME,
     ENGINE_CAPABILITY_VAULT,
+    ENGINE_CAPABILITY_VAULT_RENAME,
     ENGINE_CAPABILITY_REMOTE_COMPUTERS,
     engineDbGroupsSchema,
     engineRowUpdateResultSchema,
@@ -42,6 +43,10 @@ import {
     brainProposalsListSchema,
     brainRevisionContentSchema,
     brainSeedResultSchema,
+    brainFilesMetaListSchema,
+    type BrainFileMeta,
+    type BrainFilesMetaWrite,
+    type BrainItemMetaPatch,
     type BrainPage,
     type BrainPageSummary,
     type BrainPageWrite,
@@ -53,6 +58,7 @@ import {
     type BrainSeedResult,
 } from '@rerun/contracts'
 import { isNetworkFailure } from '@/lib/net/network-error'
+import { forgetMachineAt } from '@/lib/engine/engine-memory'
 import {
     type EngineAgentConfigPatch,
     type EngineMcpServer,
@@ -179,7 +185,10 @@ async function fetchEngine(url: string, init: RequestInit): Promise<Response> {
     try {
         return await fetch(url, init)
     } catch (err) {
-        if (isNetworkFailure(err)) throw new EngineUnreachableError(err)
+        if (isNetworkFailure(err)) {
+            forgetMachineAt(url)
+            throw new EngineUnreachableError(err)
+        }
         throw err
     }
 }
@@ -701,6 +710,11 @@ export async function supportsVault(conn: EngineConnection): Promise<boolean> {
     return (await engineCapabilities(conn)).has(ENGINE_CAPABILITY_VAULT)
 }
 
+// A Vault item keeps the name a person gave it apart from the label its sign-ins write.
+export async function supportsVaultRename(conn: EngineConnection): Promise<boolean> {
+    return (await engineCapabilities(conn)).has(ENGINE_CAPABILITY_VAULT_RENAME)
+}
+
 export async function supportsRemoteComputers(conn: EngineConnection): Promise<boolean> {
     return (await engineCapabilities(conn)).has(ENGINE_CAPABILITY_REMOTE_COMPUTERS)
 }
@@ -973,6 +987,23 @@ export async function readBrainPage(conn: EngineConnection, slug: string): Promi
 
 export async function writeBrainPage(conn: EngineConnection, slug: string, body: BrainPageWrite): Promise<BrainPageDetail> {
     return request(conn, `/brain/pages/${encodeURIComponent(slug)}`, { method: 'PUT', body: JSON.stringify(body) }, d => brainPageResponseSchema.parse(d))
+}
+
+export async function setBrainPageMeta(conn: EngineConnection, slug: string, patch: BrainItemMetaPatch): Promise<BrainPageDetail> {
+    return request(conn, `/brain/pages/${encodeURIComponent(slug)}/meta`, { method: 'PATCH', body: JSON.stringify(patch) }, d => brainPageResponseSchema.parse(d))
+}
+
+// How the Brain files the shared folder: tags, who added each file and its Box.
+export async function listBrainFileMeta(conn: EngineConnection): Promise<BrainFileMeta[]> {
+    return request(conn, '/brain/files/meta', { method: 'GET' }, d => brainFilesMetaListSchema.parse(d).files)
+}
+
+export async function setBrainFileMeta(conn: EngineConnection, body: BrainFilesMetaWrite): Promise<BrainFileMeta[]> {
+    return request(conn, '/brain/files/meta', { method: 'PUT', body: JSON.stringify(body) }, d => brainFilesMetaListSchema.parse(d).files)
+}
+
+export async function setBrainAgentBoxes(conn: EngineConnection, boxes: Record<string, string | null>): Promise<void> {
+    await request(conn, '/brain/agent-boxes', { method: 'PUT', body: JSON.stringify({ boxes }) }, () => undefined)
 }
 
 export async function deleteBrainPage(conn: EngineConnection, slug: string): Promise<void> {

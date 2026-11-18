@@ -17,13 +17,13 @@
     },
     "threads": {
         "general": "General",
-        "back": "Volver a General",
-        "untitled": "Nueva tarea"
+        "back": "Torna a Generale",
+        "untitled": "Nuova attività"
     },
     "history": {
         "title": "Conversazioni",
-        "close": "Cerrar",
-        "empty": "Aún non c'è hilos."
+        "close": "Chiudi",
+        "empty": "Ancora nessuna conversazione."
     },
     "resize": "Ridimensiona la chat",
     "modelPill": {

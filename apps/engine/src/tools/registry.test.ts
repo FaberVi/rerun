@@ -6,6 +6,8 @@ import { vi } from 'vitest'
 process.env.RERUN_DATA_DIR = mkdtempSync(resolve(tmpdir(), 'rerun-registry-'))
 process.env.RERUN_API_KEY = ''
 process.env.RERUN_DESKTOP = 'on'
+// Its tools only come with a linked computer, which this data-dir has none of: remote.test.ts covers them.
+process.env.RERUN_REMOTE_COMPUTERS = 'off'
 
 const state = vi.hoisted(() => ({
     connected: [] as string[],
@@ -77,7 +79,7 @@ beforeEach(() => {
 // The schemas ride along on every step of every run: the budget is what the whole set may cost a
 // prompt (a ratchet, set just above what the set weighs today and lowered as families move on
 // demand), and the per-tool cap is what the OpenAI chat API accepts for a description.
-const TOOL_PAYLOAD_CHARS_BUDGET = 72_528
+const TOOL_PAYLOAD_CHARS_BUDGET = 73_075
 const TOOL_DESCRIPTION_CHARS_CAP = 1_024
 
 describe('tool payload', () => {

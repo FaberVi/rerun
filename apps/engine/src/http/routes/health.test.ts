@@ -6,7 +6,7 @@ process.env.RERUN_DATA_DIR = mkdtempSync(resolve(tmpdir(), 'rerun-health-'))
 process.env.RERUN_API_KEY = 'secret'
 
 const { describe, expect, it, vi } = await import('vitest')
-const { ENGINE_CAPABILITY_ARTIFACT_UPDATE, ENGINE_CAPABILITY_FILES_STREAM, ENGINE_CAPABILITY_FOREMAN_COWORKER, ENGINE_CAPABILITY_FOREMAN_FILES, ENGINE_CAPABILITY_SCHEDULE_RENAME, ENGINE_CAPABILITY_OPENCODE, ENGINE_CAPABILITY_REMOTE_COMPUTERS } = await import('@rerun/contracts')
+const { ENGINE_CAPABILITY_ARTIFACT_UPDATE, ENGINE_CAPABILITY_FILES_STREAM, ENGINE_CAPABILITY_FOREMAN_COWORKER, ENGINE_CAPABILITY_FOREMAN_FILES, ENGINE_CAPABILITY_SCHEDULE_RENAME, ENGINE_CAPABILITY_OPENCODE, ENGINE_CAPABILITY_REMOTE_COMPUTERS, ENGINE_CAPABILITY_VAULT_RENAME } = await import('@rerun/contracts')
 const { createServer } = await import('../server.js')
 const { claimSession, registerRunAbort, releaseSession, unregisterRunAbort } = await import('../../runtime/run-control.js')
 const { buildCommit, processStartedAt } = await import('../../runtime/build-info.js')
@@ -35,19 +35,20 @@ describe('GET /health', () => {
         expect(body.capabilities).toContain(ENGINE_CAPABILITY_FOREMAN_FILES)
         expect(body.capabilities).toContain(ENGINE_CAPABILITY_FOREMAN_COWORKER)
         expect(body.capabilities).toContain(ENGINE_CAPABILITY_SCHEDULE_RENAME)
+        expect(body.capabilities).toContain(ENGINE_CAPABILITY_VAULT_RENAME)
         expect(body.capabilities).toContain(ENGINE_CAPABILITY_OPENCODE)
         expect(body.capabilities).toContain(ENGINE_CAPABILITY_ARTIFACT_UPDATE)
         expect(Number.isNaN(Date.parse(body.startedAt))).toBe(false)
     })
 
-    it('offers linked computers only once they are switched on, and counts the ones connected', async () => {
-        expect((await health()).capabilities).not.toContain(ENGINE_CAPABILITY_REMOTE_COMPUTERS)
-        vi.resetModules()
-        vi.stubEnv('RERUN_REMOTE_COMPUTERS', 'on')
-        const { createServer: create } = await import('../server.js')
-        const body = (await (await create().request('/health')).json()) as Health & { remoteComputers: number }
+    it('offers linked computers unless they are switched off, and counts the ones connected', async () => {
+        const body = (await health()) as Health & { remoteComputers: number }
         expect(body.capabilities).toContain(ENGINE_CAPABILITY_REMOTE_COMPUTERS)
         expect(body.remoteComputers).toBe(0)
+        vi.resetModules()
+        vi.stubEnv('RERUN_REMOTE_COMPUTERS', 'off')
+        const { createServer: create } = await import('../server.js')
+        expect(((await (await create().request('/health')).json()) as Health).capabilities).not.toContain(ENGINE_CAPABILITY_REMOTE_COMPUTERS)
         vi.unstubAllEnvs()
     })
 

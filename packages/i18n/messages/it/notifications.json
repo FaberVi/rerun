@@ -26,16 +26,16 @@
             }
         },
         "peek": {
-            "close": "Cerrar",
+            "close": "Chiudi",
             "back": "Indietro",
-            "openConversation": "Abrir conversazione",
+            "openConversation": "Apri la conversazione",
             "showMore": "Mostra altro",
             "showLess": "Mostra meno",
             "sent": "Inviato a {agent}",
-            "stale": "Esta solicitud ya tiene risposta.",
+            "stale": "Questa richiesta ha già una risposta.",
             "openToAnswer": "Apri la conversazione per responder.",
             "busy": "{agent} ancora è trabajando. Riprova en un momento.",
-            "failed": "Tu risposta non se envió. Riprova."
+            "failed": "La tua risposta non è stata inviata. Riprova."
         },
         "markAll": {
             "title": "Segnare tutto come letto?",

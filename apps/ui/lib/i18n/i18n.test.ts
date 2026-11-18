@@ -24,7 +24,7 @@ describe('resolveLocale', () => {
     })
 
     it('ignores what it does not ship', () => {
-        expect(resolveLocale({ userLocale: 'it', cookie: 'xx', acceptLanguage: 'es-MX' })).toBe('it')
+        expect(resolveLocale({ userLocale: 'it', cookie: 'xx', acceptLanguage: 'es-MX' })).toBe('es')
         expect(matchLocale('FR-ca')).toBe('fr')
         expect(matchLocale('pt-PT')).toBe('pt')
         expect(matchLocale('de-CH')).toBe('de')
@@ -38,7 +38,6 @@ describe('resolveLocale', () => {
         expect(localeNativeName('pt')).toBe('Português')
         expect(localeNativeName('de')).toBe('Deutsch')
         expect(localeNativeName('tr')).toBe('Türkçe')
-        expect(localeNativeName('it')).toBe('Italiano')
         expect(localeNativeName('en')).toBe('English')
     })
 })

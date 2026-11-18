@@ -84,7 +84,7 @@ When the Claude or ChatGPT plan a coworker runs on hits its usage limit (the 5-h
 - They apply to every coworker, whether it follows the default model or has one of its own, and to scheduled runs: a schedule fires on a backup instead of waiting for the reset.
 - You can add up to 5 backups.
 - **Rerun credit as last resort** is off by default. Switched on, the coworker moves to Rerun only once every plan in the list is out, and the credit is never spent otherwise.
-- With no backup, nothing changes: the run stops on the limit and the chat offers **Switch**.
+- With no backup, the run stops on the limit and the chat offers **Switch**. Pick a model there and the coworker carries on from where it stopped, without you sending anything.
 
 On a ChatGPT plan, a coworker also generates and edits images with the image tool built into Codex. On a self-hosted install, the models and providers are set up as described in [AI models](/self-host/models).
 
@@ -129,6 +129,8 @@ See [Human in the loop](/agents/human-in-the-loop) for the families that pause t
 ### Paid data
 
 On Rerun Cloud, **Leads, SEO & social data** lets a coworker find prospects with their work emails, phone numbers and company data, check search volumes, keyword ideas and backlinks, read Google results and local businesses, and read public profiles and posts on LinkedIn, TikTok, Instagram, X, YouTube, Facebook and Reddit. Each call is paid from your [Rerun credits](/billing#rerun-credits). A self-hosted install does not sell paid data, so the card does not show there.
+
+A coworker with [LinkedIn Pro](/agents/apps#paid-apps) reads LinkedIn with your account first, at no credit. It buys LinkedIn data only for what your account cannot read, or offers it as the safer way once your account is past its recommended daily pace of reading, and tells you why.
 
 Before it spends, the coworker asks you to approve an estimated cost. Switch on **Spend without asking** under the card, or click **Always allow** on a spend approval, to skip that step so scheduled runs and delegated tasks can use paid data while you are away.
 

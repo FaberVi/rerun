@@ -68,10 +68,10 @@
         "typeAnswer": "Scrivi la risposta…",
         "somethingElse": "Altro",
         "yourAnswer": "La tua risposta",
-        "record": "Responder con tu voz",
-        "useRecording": "Usar esta grabación",
-        "discardRecording": "Descartar la grabación",
-        "retryRecording": "Riprova la transcripción",
+        "record": "Rispondi con la voce",
+        "useRecording": "Usa questa registrazione",
+        "discardRecording": "Scarta la registrazione",
+        "retryRecording": "Riprova la trascrizione",
         "uploadFailed": "Non se pudieron adjuntar esos file. Riprova."
     },
     "secret": {

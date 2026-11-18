@@ -12,7 +12,7 @@
     "price": {
         "perMonth": "/mese",
         "perMonthBilledYearly": "/mese, fatturati {total}/anno",
-        "once": "una vez"
+        "once": "una tantum"
     },
     "billing": {
         "label": "Periodo di fatturazione",
@@ -196,81 +196,81 @@
     "lifetime": {
         "seo": {
             "title": "Offerta lifetime Rerun",
-            "description": "Paga {price} una sola vez y quédate con Rerun per siempre: coworkers y compañeros ilimitados en tu propia máquina privada, con tu propia IA."
+            "description": "Paga {price} una sola volta e tieni Rerun a vita: coworker e colleghi illimitati sulla tua macchina privata, con la tua IA."
         },
-        "eyebrow": "Oferta vitalicia",
-        "headline": "Rerun per siempre, con un solo pago",
-        "description": "Coworkers y compañeros ilimitados en tu propia máquina privada. Un solo pago, senza abbonamento.",
+        "eyebrow": "Offerta a vita",
+        "headline": "Rerun a vita, con un solo pagamento",
+        "description": "Coworker e colleghi illimitati sulla tua macchina privata. Un solo pagamento, nessun abbonamento.",
         "price": {
-            "once": "una sola vez",
-            "instead": "en lugar de <s>{monthly} al mes</s>"
+            "once": "una sola volta",
+            "instead": "invece di <s>{monthly} al mese</s>"
         },
-        "cta": "Obtener acceso vitalicio",
+        "cta": "Ottieni l'accesso a vita",
         "tiers": {
             "label": "Precios",
-            "title": "Amortizado en {months, plural, one {# mes} other {# meses}}",
-            "lede": "El plan mensual cuesta {monthly} al mes. La oferta de por vida cuesta {price}, una sola vez.",
+            "title": "Ammortizzato in {months, plural, one {# mese} other {# mesi}}",
+            "lede": "Il piano mensile costa {monthly} al mese. L'offerta a vita costa {price}, una sola volta.",
             "pro": {
-                "description": "Paga cada mes, mientras uses Rerun.",
-                "control": "Son {yearly} al año, y {threeYears} en 3 años.",
-                "featuresLabel": "Pro incluye"
+                "description": "Paghi ogni mese, finché usi Rerun.",
+                "control": "Sono {yearly} all'anno e {threeYears} in 3 anni.",
+                "featuresLabel": "Pro include"
             },
             "lifetime": {
-                "name": "De por vida",
-                "description": "Paga una vez y quédate con Rerun per siempre.",
-                "control": "Amortizado en {months, plural, one {# mes} other {# meses}}. Niente que renovar.",
-                "featuresLabel": "La oferta de por vida incluye",
+                "name": "A vita",
+                "description": "Paghi una volta e tieni Rerun per sempre.",
+                "control": "Ammortizzato in {months, plural, one {# mese} other {# mesi}}. Niente da rinnovare.",
+                "featuresLabel": "L'offerta a vita include",
                 "features": {
                     "coworkers": "<b>Coworkers ilimitados</b> trabajando per ti, codo a codo",
-                    "seats": "<b>Puestos ilimitados</b>, senza cargo por utente",
-                    "machine": "Tu propia <b>máquina privada</b>, funcionando día y noche",
+                    "seats": "<b>Posti illimitati</b>, nessun costo per utente",
+                    "machine": "La tua <b>macchina privata</b>, in funzione giorno e notte",
                     "ownAi": "Tu propia IA: <b>una clave de API</b> o <b>tu abbonamento de ChatGPT</b>",
-                    "noCredits": "Crédito de Rerun <b>no incluido</b>"
+                    "noCredits": "Credito Rerun <b>non incluso</b>"
                 }
             }
         },
         "plan": {
             "label": "Incluido",
-            "title": "Tu IA, tu equipo, tu agenda"
+            "title": "La tua IA, il tuo team, i tuoi tempi"
         },
         "steps": {
-            "label": "Cómo funciona",
+            "label": "Come funziona",
             "title": "Tres passaggios, dos minutos",
             "pay": {
-                "title": "Paga una vez",
-                "body": "Paga en Stripe en menos de un minuto."
+                "title": "Paghi una volta",
+                "body": "Paghi su Stripe in meno di un minuto."
             },
             "code": {
-                "title": "Recibe tu código",
-                "body": "Aparece justo dopo del pago y llega a tu bandeja de input."
+                "title": "Ricevi il tuo codice",
+                "body": "Compare subito dopo il pagamento e arriva nella tua casella di posta."
             },
             "redeem": {
                 "title": "Canjéalo",
-                "body": "Accedi, pega el código y il tuo workspace pasa al plan vitalicio."
+                "body": "Accedi, incolla il codice e il tuo workspace passa al piano a vita."
             }
         },
         "faq": {
             "label": "FAQ",
             "title": "Domande",
             "subscribed": {
-                "question": "Ya pago un plan mensual. Puedo cambiarme?",
-                "answer": "Sí. Escribe a help@rerun.build prima de canjear tu código y pasamos il tuo workspace al plan vitalicio."
+                "question": "Pago già un piano mensile. Posso passare?",
+                "answer": "Sì. Scrivi a help@rerun.build prima di riscattare il codice e spostiamo il tuo workspace sul piano a vita."
             },
             "workspaces": {
-                "question": "Un código sirve per varios workspaces?",
-                "answer": "Un código cambia un solo workspace. Compra un código por cada workspace."
+                "question": "Un codice può sbloccare più workspace?",
+                "answer": "Un codice attiva un solo workspace. Acquista un codice per ogni workspace."
             },
             "ownAi": {
                 "question": "Con qué IA trabajan mis coworkers?",
-                "answer": "Con la tuya: una clave de API del proveedor que elijas o tu abbonamento de ChatGPT. El credito de Rerun non forma parte de la oferta."
+                "answer": "La tua: una chiave API del provider che scegli oppure il tuo abbonamento ChatGPT. Il credito Rerun non fa parte dell'offerta."
             },
             "notIncluded": {
                 "question": "Qué non è incluido?",
-                "answer": "El credito de Rerun, la IA que cobramos según el uso. Tus coworkers funcionan con tu propia clave de API o tu abbonamento de ChatGPT."
+                "answer": "Il credito Rerun, l'IA che fatturiamo in base all'uso. I tuoi coworker funzionano invece con la tua chiave API o con il tuo abbonamento ChatGPT."
             },
             "updates": {
-                "question": "Recibo las novedades?",
-                "answer": "Sí. Un workspace de por vida usa el mismo Rerun que tutti los demás workspaces, actualizaciones incluidas."
+                "question": "Ricevo le nuove funzioni?",
+                "answer": "Sì. Un workspace a vita usa lo stesso Rerun di tutti gli altri workspace, aggiornamenti inclusi."
             }
         }
     }

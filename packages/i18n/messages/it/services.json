@@ -123,9 +123,9 @@
         "skip": "Salta",
         "finish": "Fine",
         "nextApp": "App successiva",
-        "fromVault": "Ya en el Vault",
-        "useAccount": "Usar {label}",
-        "connectNew": "Account nueva"
+        "fromVault": "Già nel Vault",
+        "useAccount": "Usa {label}",
+        "connectNew": "Nuovo account"
     },
     "signInPopup": {
         "connecting": "Connessione a {name}…"

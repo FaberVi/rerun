@@ -24,7 +24,7 @@ import { useConnectorServices } from '@/hooks/useConnectorServices'
 import { AgentBuddy } from '@rerun/ui/iso-grid'
 import type { CatalogEntry } from '@rerun/ui/new-agent'
 import { ChatComposer, type ChatComposerHandle } from '@/components/chat/ChatComposer'
-import { useMentionAutocomplete } from '@/components/chat/MentionAutocomplete'
+import { mentionMenuBox, useMentionAutocomplete, type MentionMenuBox } from '@/components/chat/MentionAutocomplete'
 import { MessageFeedbackDialog } from '@/components/chat/MessageFeedbackDialog'
 import { AuthoredGroup } from '@/components/chat/AuthoredGroup'
 import { ChatTimeSeparator } from '@/components/chat/ChatTimeSeparator'
@@ -36,7 +36,8 @@ import { ComputerAccessBlock } from '@/components/chat/computer/ComputerAccessBl
 import { SkeletonChat } from '@/components/ui/skeleton'
 
 import { cancelRunAction, getRunAction, updateAgentConfigAction } from '@/app/api/_actions/agent.actions'
-import { acknowledgeSessionAlertAction, cancelSessionRunsAction, fetchSessionActiveRun, fetchSessionMessages, finalizeSessionAction, openSessionAction } from '@/app/api/_actions/session.actions'
+import { acknowledgeSessionAlertAction, cancelSessionRunsAction, fetchSessionActiveRun, fetchSessionMessages, finalizeSessionAction } from '@/app/api/_actions/session.actions'
+import { fetchSessionSnapshot } from '@/lib/chat/session-snapshot'
 import type { SessionUsageSeed } from '@/app/api/_services/chat.service'
 import type { ThreadRow } from '@/app/api/_services/conversation.service'
 import { useAgentModel } from '@/hooks/useAgentModel'
@@ -177,13 +178,13 @@ export function AgentChat({ uid, active, agentId, agentName, sessionId, sessionP
     // The field is the composer in the footer or a pending question's answer in the thread, so the
     // menu is placed against the whole chat and sits on the field wherever it is.
     const chatRootRef = useRef<HTMLDivElement>(null)
-    const [mentionMenuTop, setMentionMenuTop] = useState(0)
+    const [mentionMenuPlace, setMentionMenuPlace] = useState<MentionMenuBox | null>(null)
     const mentionMenuOpen = mentionMenu !== null
     useLayoutEffect(() => {
         const root = chatRootRef.current
         const input = inputRef.current
         if (!mentionMenuOpen || !root || !input) return
-        setMentionMenuTop(input.getBoundingClientRect().top - root.getBoundingClientRect().top)
+        setMentionMenuPlace(mentionMenuBox(input, root))
     }, [mentionMenuOpen, inputRef])
 
     // An attachment in flight holds the queued message back until its last byte.
@@ -501,7 +502,7 @@ export function AgentChat({ uid, active, agentId, agentName, sessionId, sessionP
         historyLoadedRef.current = sessionId
         setHistoryLoading(true)
         setSnapshotPendingFor(sessionId)
-        openSessionAction(sessionId)
+        fetchSessionSnapshot(sessionId)
             .then(snapshot => {
                 // A run attached while this fetch was in flight: the transcript is the stream's
                 // now, and writing the persisted history back would wipe what it has emitted.
@@ -725,8 +726,28 @@ export function AgentChat({ uid, active, agentId, agentName, sessionId, sessionP
     }, [openAiProviders])
     // A plan that is out, or that does not include the model, is fixed by picking another model for
     // this conversation, which is the composer's picker rather than the credentials dialog.
+    // Only a spent plan picks the stopped turn back up on the model chosen: the other errors may have
+    // failed before the engine stored the message, and Retry is what sends it again.
     const requestModelPicker = useModelPickerStore(state => state.request)
-    const switchModel = useCallback(() => requestModelPicker(uid), [requestModelPicker, uid])
+    const resumeOnPickRef = useRef(false)
+    const [resumePicks, setResumePicks] = useState(0)
+    const openModelPicker = useCallback(
+        (resumeOnPick: boolean) => {
+            resumeOnPickRef.current = resumeOnPick
+            requestModelPicker(uid)
+        },
+        [requestModelPicker, uid]
+    )
+    const switchModel = useCallback(() => openModelPicker(false), [openModelPicker])
+    const switchModelAndContinue = useCallback(() => openModelPicker(true), [openModelPicker])
+    const handlePicked = useCallback(() => {
+        if (!resumeOnPickRef.current) return
+        resumeOnPickRef.current = false
+        setResumePicks(count => count + 1)
+    }, [])
+    useEffect(() => {
+        resumeOnPickRef.current = false
+    }, [sessionId])
     // The keyless Rerun connection has no sign-in of its own, so it keeps the plain list.
     const reconnectAiProvider = useWorkspaceSettingsStore(state => state.reconnectAiProvider)
     const reconnectProvider = useCallback(() => {
@@ -884,6 +905,14 @@ export function AgentChat({ uid, active, agentId, agentName, sessionId, sessionP
     useEffect(() => {
         if (resumeAfterUpgrade && upgradeLanded) pickTaskBackUp()
     }, [resumeAfterUpgrade, upgradeLanded, pickTaskBackUp])
+    // Run after the render that holds the new pick: the transport reads the model from a ref that
+    // render sets.
+    const resumedPicksRef = useRef(0)
+    useEffect(() => {
+        if (resumePicks === resumedPicksRef.current) return
+        resumedPicksRef.current = resumePicks
+        pickTaskBackUp()
+    }, [resumePicks, pickTaskBackUp])
     useEffect(() => {
         if (!resumeAfterUpgrade) return
         const timer = setTimeout(() => setResumeStalled(true), RESUME_STALL_MS)
@@ -1093,7 +1122,7 @@ export function AgentChat({ uid, active, agentId, agentName, sessionId, sessionP
                         )}
                         {displayedError !== null && errorKind !== null && (
                             <Message from="assistant">
-                                <MessageContent>{errorKind === 'budget' ? <BudgetExhaustedNotice onConnectProvider={connectProvider} ownConnection={runOnOwnConnection} trialing={workspace?.subscription_status === 'trialing' || resumeAfterUpgrade} paused={!!workspace?.rerun_credit_paused_at} noCredit={rerunCredit.budgetMicros === 0} lifetime={isLifetimePlan(workspace)} claudePlanOffered={isClaudePlanOffered(workspace)} {...trialUpgrade} /> : <ProviderErrorNotice kind={errorKind} message={displayedError} onSwitchModel={switchModel} onReconnect={reconnectProvider} onStopRun={handleStop} onContinue={continueInterruptedRun} onRetry={canRetry ? retryLastTurn : undefined} onNewConversation={onNewConversation} />}</MessageContent>
+                                <MessageContent>{errorKind === 'budget' ? <BudgetExhaustedNotice onConnectProvider={connectProvider} ownConnection={runOnOwnConnection} trialing={workspace?.subscription_status === 'trialing' || resumeAfterUpgrade} paused={!!workspace?.rerun_credit_paused_at} noCredit={rerunCredit.budgetMicros === 0} lifetime={isLifetimePlan(workspace)} claudePlanOffered={isClaudePlanOffered(workspace)} {...trialUpgrade} /> : <ProviderErrorNotice kind={errorKind} message={displayedError} onSwitchModel={errorKind === 'usage_limit' ? switchModelAndContinue : switchModel} onReconnect={reconnectProvider} onStopRun={handleStop} onContinue={continueInterruptedRun} onRetry={canRetry ? retryLastTurn : undefined} onNewConversation={onNewConversation} />}</MessageContent>
                             </Message>
                         )}
                     </ConversationContent>
@@ -1102,7 +1131,7 @@ export function AgentChat({ uid, active, agentId, agentName, sessionId, sessionP
             </Conversation>
             <MessageFeedbackDialog open={messageFeedback.dialogOpen} rating={messageFeedback.dialogRating} onOpenChange={messageFeedback.onDialogOpenChange} onSubmit={messageFeedback.submitDetails} />
 
-            {mentionMenu && <div className="absolute inset-x-3" style={{ top: mentionMenuTop }}>{mentionMenu}</div>}
+            {mentionMenu && mentionMenuPlace && <div className="absolute" style={mentionMenuPlace}>{mentionMenu}</div>}
             {footerVisible && (
                 <div className="border-t border-border p-3 *:mx-auto *:max-w-[var(--chat-column,none)]">
                     <AnimatePresence initial={false}>
@@ -1124,7 +1153,7 @@ export function AgentChat({ uid, active, agentId, agentName, sessionId, sessionP
                                     onContinue={() => setup?.sessionId && onOpenInstall?.(setup.sessionId)}
                                     disabled={status === 'streaming' || status === 'submitted'}
                                     hint={modelHint}
-                                    modelSlot={<ModelSelector agentId={agentId} pickerKey={uid} onReadyChange={setModelReady} onOwnConnectionChange={setHasOwnConnection} onConnectionChange={setActiveConnectionId} onRefusedModelChange={setRefusedModel} />}
+                                    modelSlot={<ModelSelector agentId={agentId} pickerKey={uid} onPicked={handlePicked} onReadyChange={setModelReady} onOwnConnectionChange={setHasOwnConnection} onConnectionChange={setActiveConnectionId} onRefusedModelChange={setRefusedModel} />}
                                     onStart={() => {
                                         if (!modelReady) {
                                             blockSend()
@@ -1141,7 +1170,7 @@ export function AgentChat({ uid, active, agentId, agentName, sessionId, sessionP
                             </motion.div>
                         ) : (
                             <motion.div key="composer" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }} className="overflow-hidden pb-px">
-                                <ChatComposer ref={composerRef} uid={uid} active={active} placeholder={composerPlaceholder} uploadTarget={uploadTarget} status={status} busy={showLoader} onSend={text => sendMessage({ text })} onSent={() => onMessageSentRef.current?.()} onStop={handleStop} onUploadingChange={setUploading} queue={{ text: queued?.text ?? null, pending: stopping, enqueue: enqueueFromComposer, onSendNow: () => void sendQueuedNow(), onDiscard: clearQueued }} gate={{ ready: modelReady, onBlocked: blockSend, hint: modelHint }} modelSlot={<ModelSelector agentId={agentId} pickerKey={uid} onReadyChange={setModelReady} onOwnConnectionChange={setHasOwnConnection} onConnectionChange={setActiveConnectionId} onRefusedModelChange={setRefusedModel} />} contextSlot={contextStats && <Context usedTokens={contextStats.used} maxTokens={contextStats.max ?? modelContextWindow(contextStats.model, contextStats.provider)} usage={contextStats.usage} modelId={contextStats.model} />} textareaRef={inputRef} textareaProps={mentionTextareaProps} mentionTokens={mentionTokens} />
+                                <ChatComposer ref={composerRef} uid={uid} active={active} placeholder={composerPlaceholder} uploadTarget={uploadTarget} status={status} busy={showLoader} onSend={text => sendMessage({ text })} onSent={() => onMessageSentRef.current?.()} onStop={handleStop} onUploadingChange={setUploading} queue={{ text: queued?.text ?? null, pending: stopping, enqueue: enqueueFromComposer, onSendNow: () => void sendQueuedNow(), onDiscard: clearQueued }} gate={{ ready: modelReady, onBlocked: blockSend, hint: modelHint }} modelSlot={<ModelSelector agentId={agentId} pickerKey={uid} onPicked={handlePicked} onReadyChange={setModelReady} onOwnConnectionChange={setHasOwnConnection} onConnectionChange={setActiveConnectionId} onRefusedModelChange={setRefusedModel} />} contextSlot={contextStats && <Context usedTokens={contextStats.used} maxTokens={contextStats.max ?? modelContextWindow(contextStats.model, contextStats.provider)} usage={contextStats.usage} modelId={contextStats.model} />} textareaRef={inputRef} textareaProps={mentionTextareaProps} mentionTokens={mentionTokens} />
                                 <ComposerSubscriptionCta open={!hasOwnConnection} claudePlanOffered={isClaudePlanOffered(workspace)} onClick={connectSubscription} />
                             </motion.div>
                         )}

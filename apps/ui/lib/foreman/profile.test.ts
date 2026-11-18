@@ -2,13 +2,13 @@ import { describe, expect, it, vi } from 'vitest'
 
 import type { WorkspaceContext } from '@/app/api/_auth/ownership'
 import { fakeSupabase } from '@/test/supabase-fake'
-import { readAnswers, writeAnswers } from './profile'
+import { readAnswers, saveFirstName, writeAnswers } from './profile'
 
 vi.mock('server-only', () => ({}))
 vi.mock('@/app/api/_services/naming.service', () => ({ ensureWorkspaceNamed: vi.fn() }))
 
 function context(db: ReturnType<typeof fakeSupabase>): WorkspaceContext {
-    return { userId: 'member-2', userEmail: null, authUser: {} as WorkspaceContext['authUser'], workspace: { id: 7 } as WorkspaceContext['workspace'], role: 'admin', boxScope: 'all', supabase: db.client }
+    return { userId: 'member-2', userEmail: null, userLocale: null, authUser: {} as WorkspaceContext['authUser'], workspace: { id: 7 } as WorkspaceContext['workspace'], role: 'admin', boxScope: 'all', supabase: db.client }
 }
 
 describe('foreman profile', () => {
@@ -40,5 +40,14 @@ describe('foreman profile', () => {
         expect(stamp.filters).toEqual(
             expect.arrayContaining([expect.objectContaining({ method: 'eq', args: ['id', 7] }), expect.objectContaining({ method: 'is', args: ['onboarded_at', null] })]),
         )
+    })
+
+    it('saves a first name without writing back what the token still holds', async () => {
+        const updateUserById = vi.fn().mockResolvedValue({ error: null })
+        const ctx = { ...context(fakeSupabase()), authUser: { user_metadata: { locale: 'en', picture: 'old.png' } }, supabase: { auth: { admin: { updateUserById } } } } as unknown as WorkspaceContext
+
+        await saveFirstName(ctx, 'Ada')
+
+        expect(updateUserById).toHaveBeenCalledWith('member-2', { user_metadata: { first_name: 'Ada', full_name: 'Ada' } })
     })
 })

@@ -51,46 +51,9 @@
         "saveFailed": "Impossibile salvare. Riprova."
     },
     "setup": {
-        "loadFailed": "Impossibile caricare la configurazione.",
-        "retry": "Riprova"
-    },
-    "conversation": {
-        "foremanRole": "Il tuo Chief of Staff",
-        "failed": "Non è andata a buon fine.",
-        "tryAgain": "Riprova",
-        "composerPlaceholder": "Rispondi al Chief of Staff"
-    },
-    "starter": {
-        "title": "Il tuo team iniziale",
-        "full": "Massimo {max} per iniziare. Togliane uno per scegliere questo.",
-        "pickUpTo": "Scegli fino a {max}. Ognuno si configura con te.",
-        "hire": "{count, plural, =0 {Scegline almeno uno} one {Assumi questo} other {Assumi questi #}}",
-        "custom": "Nessuno di questi, dimmi cosa ti serve",
-        "customPlaceholder": "Cosa deve fare il tuo coworker?",
-        "back": "Indietro",
-        "send": "Invia"
-    },
-    "plan": {
-        "defaultTitle": "Il tuo primo coworker",
-        "confirmed": "Confermato",
-        "changesAsked": "Modifiche richieste",
-        "skipped": "Saltato",
-        "build": "Crea il mio coworker",
-        "change": "Modifica qualcosa"
-    },
-    "question": {
-        "skip": "Salta questa domanda",
-        "selectAll": "Seleziona tutte le opzioni che valgono",
-        "typeAnswer": "Scrivi la risposta…",
-        "somethingElse": "Altro",
-        "send": "Invia",
-        "neither": "Nessuna delle due"
-    },
-    "team": {
-        "ready": "Workspace pronto",
         "starting": {
-            "title": "Preparazione del workspace",
-            "body": "Il coworker viene creato subito dopo."
+            "title": "Configurazione del tuo workspace",
+            "body": "Il tuo Chief of Staff si sta svegliando…"
         },
         "failed": {
             "title": "Non è andata a buon fine",
@@ -101,16 +64,6 @@
             "body": "Completa la configurazione su {host}."
         },
         "tryAgain": "Riprova"
-    },
-    "build": {
-        "building": "Creazione del team",
-        "empty": "Il team non ha potuto essere creato",
-        "ready": "Il team è pronto",
-        "nothingLost": "Non si è perso nulla. Riprova tra un momento.",
-        "oneFailed": "{name} non ha ancora potuto essere creato.",
-        "someFailed": "{count, plural, one {# coworker non ha ancora potuto essere creato.} other {# coworker non hanno ancora potuto essere creati.}}",
-        "tryAgain": "Riprova",
-        "startLead": "Avvia installazione di {name}"
     },
     "waitlist": {
         "title": "Siamo al completo",

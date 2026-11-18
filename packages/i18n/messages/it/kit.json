@@ -345,7 +345,7 @@
         "noUpdates": "Nessun aggiornamento",
         "pillLabel": "Notifiche: {summary}",
         "pillLabelEmpty": "Notifiche: nessun aggiornamento",
-        "needsYouRow": "Te necesita",
+        "needsYouRow": "Ha bisogno di te",
         "needsYouCount": "{count, plural, one {# ti serve} other {# ti servono}}",
         "doneCount": "{count, plural, one {# completata} other {# completate}}",
         "needsYouRich": "{count, plural, one {<b>#</b> ti serve} other {<b>#</b> ti servono}}",

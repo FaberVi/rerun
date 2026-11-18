@@ -1,114 +1,114 @@
 {
     "menu": {
         "app": {
-            "about": "Acerca de {name}",
+            "about": "Informazioni su {name}",
             "hide": "Ocultar {name}",
-            "hideOthers": "Ocultar otros",
-            "showAll": "Mostrar todo",
-            "quit": "Salir de {name}",
+            "hideOthers": "Nascondi altre",
+            "showAll": "Mostra tutto",
+            "quit": "Esci da {name}",
             "checkForUpdates": "Cerca actualizaciones…",
-            "changeServer": "Cambiar de server…"
+            "changeServer": "Cambia server…"
         },
         "file": {
             "title": "File",
-            "closeWindow": "Cerrar ventana",
-            "newWindow": "Nueva ventana"
+            "closeWindow": "Chiudi finestra",
+            "newWindow": "Nuova finestra"
         },
         "edit": {
-            "title": "Edición",
+            "title": "Modifica",
             "undo": "Deshacer",
             "redo": "Rehacer",
             "cut": "Cortar",
             "copy": "Copiar",
             "paste": "Pegar",
-            "pasteAndMatchStyle": "Pegar con el mismo estilo",
+            "pasteAndMatchStyle": "Incolla e adatta lo stile",
             "delete": "Elimina",
-            "selectAll": "Seleccionar todo",
+            "selectAll": "Seleziona tutto",
             "find": "Cerca…"
         },
         "view": {
             "title": "Ver",
             "reload": "Recargar",
-            "forceReload": "Forzar recarga",
-            "toggleDevTools": "Herramientas de desarrollo",
-            "actualSize": "Tamaño real",
+            "forceReload": "Ricarica forzata",
+            "toggleDevTools": "Strumenti per sviluppatori",
+            "actualSize": "Dimensioni effettive",
             "zoomIn": "Acercar",
             "zoomOut": "Alejar",
-            "toggleFullScreen": "Pantalla completa"
+            "toggleFullScreen": "Schermo intero"
         },
         "window": {
             "title": "Ventana",
             "minimize": "Minimizar",
             "zoom": "Zoom",
-            "front": "Traer todo al frente"
+            "front": "Porta tutto in primo piano"
         },
         "help": {
             "title": "Ayuda",
-            "docs": "Documentación"
+            "docs": "Documentazione"
         }
     },
     "offline": {
-        "title": "Non se puede connettir con Rerun",
-        "body": "Controlla tu conexión. La app vuelve a connettirse a {host} sola.",
-        "unavailable": "{host} non responde in questo momento. La app lo vuelve a intentar sola.",
+        "title": "Impossibile raggiungere Rerun",
+        "body": "Controlla la connessione. L'app si ricollega da sola a {host}.",
+        "unavailable": "{host} non risponde al momento. L'app riprova da sola.",
         "retry": "Riprova"
     },
     "incompatible": {
         "title": "Actualiza Rerun per continua",
-        "body": "Esta versión de la app è demasiado antigua per {host}.",
-        "download": "Scarica la última versión",
-        "downloading": "Descaricamento la actualización… {percent} %",
+        "body": "Questa versione dell'app è troppo vecchia per {host}.",
+        "download": "Scarica l'ultima versione",
+        "downloading": "Download dell'aggiornamento… {percent}%",
         "restart": "Reiniciar per actualizar"
     },
     "unload": {
-        "message": "Salir de esta pagina?",
-        "detail": "Un coworker sigue trabajando o un file tiene cambios senza salvar.",
+        "message": "Lasciare questa pagina?",
+        "detail": "Un coworker sta ancora lavorando oppure un file ha modifiche non salvate.",
         "leave": "Salir",
         "stay": "Quedarme"
     },
     "find": {
-        "placeholder": "Cerca en la pagina",
+        "placeholder": "Cerca nella pagina",
         "matches": "{active} de {total}",
-        "noMatches": "Sin resultados",
-        "previous": "Resultado anterior",
-        "next": "Resultado siguiente",
-        "close": "Cerrar"
+        "noMatches": "Nessun risultato",
+        "previous": "Risultato precedente",
+        "next": "Risultato successivo",
+        "close": "Chiudi"
     },
     "server": {
         "title": "Conéctate a tu server",
-        "description": "Escribe la dirección del server Rerun que usas.",
-        "label": "Dirección del server",
+        "description": "Inserisci l'indirizzo del server Rerun che usi.",
+        "label": "Indirizzo del server",
         "connect": "Connetti",
-        "invalid": "Escribe una dirección como rerun.example.com.",
-        "unreachable": "Niente responde en esta dirección.",
-        "notRerun": "Esta dirección non è un server Rerun.",
-        "tooOld": "Este server necesita la versión {version} de la app o una posterior.",
-        "insecure": "Esta dirección non è cifrada. Usa https:// salvo que el server esté en esta computadora.",
-        "useRerunCloud": "Usar Rerun Cloud",
+        "invalid": "Inserisci un indirizzo come rerun.example.com.",
+        "unreachable": "Nessuna risposta a questo indirizzo.",
+        "notRerun": "Questo indirizzo non è un server Rerun.",
+        "tooOld": "Questo server richiede la versione {version} dell'app o successiva.",
+        "insecure": "Questo indirizzo non è cifrato. Usa https:// a meno che il server non giri su questo computer.",
+        "useRerunCloud": "Usa Rerun Cloud",
         "cancel": "Annulla"
     },
     "updates": {
-        "upToDate": "Estás al día",
-        "upToDateDetail": "Rerun {version} è la última versión.",
+        "upToDate": "Sei aggiornato",
+        "upToDateDetail": "Rerun {version} è l'ultima versione.",
         "failed": "Non se pudieron cerca actualizaciones",
         "readyToInstall": "Rerun {version} è listo per installase",
-        "readyDetail": "La app se reinicia per terminar la actualización.",
+        "readyDetail": "L'app si riavvia per completare l'aggiornamento.",
         "restartNow": "Reiniciar ora",
         "later": "Più tarde"
     },
     "tray": {
-        "open": "Abrir {name}",
-        "waiting": "{count, plural, one {# te espera} other {# te esperan}}",
-        "openAtLogin": "Abrir al iniciar sesión",
-        "stillRunning": "{name} sigue funcionando aquí. Ciérralo da este icono.",
-        "quickAsk": "Domanda rápida",
+        "open": "Apri {name}",
+        "waiting": "{count, plural, one {# ti aspetta} other {# ti aspettano}}",
+        "openAtLogin": "Apri al login",
+        "stillRunning": "{name} continua a funzionare qui. Chiudilo da questa icona.",
+        "quickAsk": "Domanda rapida",
         "quickAskVoice": "Domanda rapida vocale"
     },
     "context": {
         "addToDictionary": "Aggiungi al diccionario",
-        "openLink": "Abrir enlace en el navegador",
-        "copyLink": "Copiar enlace",
-        "copyImage": "Copiar imagen",
+        "openLink": "Apri il link nel browser",
+        "copyLink": "Copia link",
+        "copyImage": "Copia immagine",
         "saveImage": "Salvar imagen"
     },
     "computer": {

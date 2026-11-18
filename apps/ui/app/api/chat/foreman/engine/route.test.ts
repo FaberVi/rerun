@@ -14,6 +14,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { DELETE, GET, POST } from './route'
 
 vi.mock('@/app/api/_auth/ownership', () => ({ requireWorkspaceContext: vi.fn() }))
+vi.mock('@/lib/services/embed', () => ({ embedTextShared: vi.fn().mockResolvedValue(null) }))
 vi.mock('@/app/api/_auth/access', () => ({ actorFromContext: vi.fn(() => ({ kind: 'user', userId: 'user-1', workspaceId: 7, role: 'member', boxScope: 'assigned' })), callableEngineAgentIds: vi.fn() }))
 vi.mock('@/lib/foreman/hub-token', () => ({ mintForemanHubToken: vi.fn(() => null) }))
 vi.mock('@rerun/cloud/phone.server', () => ({ isPhoneStepPending: vi.fn() }))
@@ -215,7 +216,7 @@ describe('/api/chat/foreman/engine', () => {
     })
 
     it('reopens one conversation by its id, its transcript still at the top of the answer', async () => {
-        vi.mocked(loadForemanConversationById).mockResolvedValue({ sessionId: 'thread', title: 'Gmail', backend: 'engine', kind: 'thread', messages: [], usage: null, lastError: null, activeRunId: 'run-9' })
+        vi.mocked(loadForemanConversationById).mockResolvedValue({ sessionId: 'thread', title: 'Gmail', backend: 'engine', kind: 'thread', messages: [], proposals: [], usage: null, lastError: null, activeRunId: 'run-9' })
 
         const response = await GET(new Request(`${URL}?sessionId=thread`))
 

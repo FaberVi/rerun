@@ -6,7 +6,7 @@
     },
     "anthropicKeyNotScoped": {
         "title": "Clave de Anthropic senza workspace",
-        "message": "Questa chiave vale per tutti los workspaces de su organización de Anthropic. Crea una clave dentro de un solo workspace en la consola de Anthropic y vuelve a connettirla."
+        "message": "Questa chiave vale per tutti i workspace della sua organizzazione Anthropic. Crea una chiave all'interno di un solo workspace nella Console Anthropic, poi ricollegala."
     },
     "titles": {
         "budget": "Credit Rerun esauriti",
@@ -45,12 +45,12 @@
             "opencodeCredits": "Credit OpenCode esauriti",
             "opencodeWindow": "Limite {window, select, weekly {settimanale} other {mensile}} OpenCode Go raggiunto",
             "opencode": "Limite OpenCode Go raggiunto",
-            "openaiCredits": "Credit de la API de OpenAI agotados",
-            "anthropicCredits": "Credit de la API de Anthropic agotados"
+            "openaiCredits": "Crediti API OpenAI esauriti",
+            "anthropicCredits": "Crediti API Anthropic esauriti"
         },
         "messages": {
-            "openaiCredits": "Tu account de la API de OpenAI non tiene Credit. Aggiungi Credit en platform.openai.com, o cambia questo coworker a otro modello.",
-            "anthropicCredits": "Tu account de la API de Anthropic non tiene Credit. Aggiungi Credit en la consola de Anthropic, en Billing, o cambia questo coworker a otro modello.",
+            "openaiCredits": "Il tuo account API OpenAI non ha più crediti. Aggiungi crediti su platform.openai.com, oppure passa questo coworker a un altro modello.",
+            "anthropicCredits": "Il tuo account API Anthropic non ha più crediti. Aggiungi crediti nella Console Anthropic, in Billing, oppure passa questo coworker a un altro modello.",
             "opencodeCredits": "Nessun credit Console rimasto. Aggiungi credit su opencode.ai, oppure scegli un modello Go per continuare.",
             "opencodeWindowResets": "Il piano OpenCode Go ha raggiunto il limite {window, select, weekly {settimanale} monthly {mensile} other {di 5 ore}}. Si resetta {resetsAt}; passa a un modello Console o a un altro provider fino ad allora.",
             "opencodeWindow": "Il piano OpenCode Go ha raggiunto il limite {window, select, weekly {settimanale} monthly {mensile} other {di 5 ore}}. Passa a un modello Console o a un altro provider fino al reset.",

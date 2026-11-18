@@ -38,7 +38,7 @@
                 },
                 "second": {
                     "title": "Ricorda la tua azienda",
-                    "body": "Ogni Coworker tiene la propria memoria: cosa vendi, come scrivi e cosa ha fatto l'ultima esecuzione."
+                    "body": "Ogni Coworker ha la propria memoria: cosa vendi, come scrivi e cosa ha fatto l'ultima volta che è stato eseguito."
                 },
                 "third": {
                     "title": "Si mette al lavoro da solo",
@@ -78,7 +78,7 @@
                     "body": "Di' a voce cosa ti serve, ovunque nel workspace. Trascrive, trova il Coworker giusto e glielo passa."
                 },
                 "third": {
-                    "title": "Tiene tutto in moto mentre non ci sei",
+                    "title": "Porta avanti il lavoro mentre non ci sei",
                     "body": "In Autopilot risponde alle domande dei tuoi Coworker secondo le regole che hai impostato, così un'esecuzione finisce invece di aspettarti."
                 }
             },

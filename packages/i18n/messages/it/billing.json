@@ -123,9 +123,9 @@
             "moreAria": "Un pacchetto di più",
             "dueBeforeTax": "A pagar hoy, senza impuestos",
             "buy": "Comprar Credit",
-            "payOnStripe": "Pagar en Stripe",
-            "chargedOnce": "Se cobra una sola vez a esta tarjeta.",
-            "checkoutFootnote": "Pagas en una pagina segura de Stripe y luego vuelves aquí."
+            "payOnStripe": "Paga su Stripe",
+            "chargedOnce": "Addebitato una sola volta su questa carta.",
+            "checkoutFootnote": "Paghi su una pagina sicura di Stripe, poi torni qui."
         }
     },
     "lifetime": {
@@ -540,7 +540,7 @@
         "headlines": {
             "credits": "{credits, plural, one {# credito/mese} other {# crediti/mese}}",
             "coworkers": "Coworker illimitati",
-            "team": "Invita a tu equipo"
+            "team": "Invita il tuo team"
         }
     },
     "cancel": {

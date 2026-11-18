@@ -321,7 +321,7 @@
                 "missing": "Installa la risposta mancante"
             },
             "removeTitle": "Rimuovi{name}?",
-            "removeDescription": "Viene eliminato anche l'archivio catturato dalla sua cartella. Aggiungere il retro coworker significa catturarlo di nuovo.",
+            "removeDescription": "Viene eliminato anche l'archivio catturato dalla sua cartella. Riaggiungere il coworker significa catturarlo di nuovo.",
             "removeConfirm": "Rimuovi",
             "removeLabel": "Rimuovi{name}",
             "capture": "Cattura dalla tua sandbox",
@@ -389,7 +389,7 @@
         },
         "helpers": {
             "free": "Chiunque abbia un piano Rerun può installarlo.",
-            "one_time": "Addebitato una volta. L'acquirente lo tiene per sempre.",
+            "one_time": "Addebitato una sola volta. L'acquirente lo tiene per sempre.",
             "recurring": "Addebitato ogni mese. L'accesso termina quando l'acquirente annulla."
         },
         "modelHelp": "{helper}Gli acquirenti necessitano ancora di un piano Rerun attivo per installare un modello.",

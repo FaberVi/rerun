@@ -1,51 +1,55 @@
 {
     "title": "Vault",
-    "description": "Accedi una vez en una app y scegli los coworkers que la usan.",
-    "search": "Cerca en el Vault",
-    "noMatch": "Sin resultados",
+    "description": "Accedi una volta a un'app, poi scegli i coworker che la usano.",
+    "search": "Cerca nel Vault",
+    "noMatch": "Nessun risultato",
     "groups": {
         "apps": "Apps"
     },
     "add": "Aggiungi",
-    "emptyTitle": "Accedi una vez y compártelo con tus coworkers",
-    "otherApp": "Otra app",
+    "emptyTitle": "Accedi una volta, condividi con i tuoi coworker",
+    "otherApp": "Altra app",
     "row": {
-        "everyone": "Tutti los coworkers",
+        "everyone": "Tutti i coworker",
         "everyoneShort": "Tutti",
         "unused": "Nessun coworker ancora",
         "usedBy": "{names}",
-        "usedByMore": "{names} y {count, plural, one {# más} other {# más}}"
+        "usedByMore": "{names} e {count, plural, one {# altro} other {# altri}}"
     },
     "status": {
         "needsAuth": "Disconnettida",
         "needsConfig": "Sin configura"
     },
     "detail": {
-        "back": "Volver al Vault",
-        "signedOut": "Disconnettida: sus coworkers non pueden usar {name} fino a que alguien vuelva a iniciar sesión.",
+        "back": "Torna al Vault",
+        "signedOut": "Disconnesso: i suoi coworker non possono usare {name} finché qualcuno non accede di nuovo.",
         "notSetUp": "{name} ancora non è configurada.",
-        "reconnect": "Volver a connettir",
-        "everyone": "Tutti los coworkers",
-        "everyoneHint": "Los coworkers que se añadan dopo también la tendrán.",
+        "reconnect": "Riconnetti",
+        "everyone": "Tutti i coworker",
+        "everyoneHint": "Anche i coworker aggiunti in seguito la riceveranno.",
         "coworkers": "Coworkers",
         "noCoworkers": "Ancora non c'è coworkers en questo workspace.",
-        "hiddenCoworkers": "{count, plural, one {# coworker} other {# coworkers}} en Boxes que non ves",
+        "hiddenCoworkers": "{count, plural, one {# coworker} other {# coworker}} nelle Boxes che non vedi",
         "variables": "Variables",
-        "reconnectFromCoworker": "Vuelve a connettirla da la pestaña Apps de un coworker que la use."
+        "reconnectFromCoworker": "Riconnettila dalla scheda App di un coworker che la usa.",
+        "rename": "Rinomina account",
+        "accountName": "Nome dell'account",
+        "namePlaceholder": "Dai un nome a questo account"
     },
     "delete": {
         "button": "Elimina",
         "title": "Elimina {name}?",
-        "loses": "Estos coworkers la pierden: {names}.",
+        "loses": "Questi coworker la perdono: {names}.",
         "nobody": "Nessun coworker la usa.",
         "confirm": "Elimina",
         "deleted": "{name} eliminiente"
     },
     "reasons": {
-        "adminOnly": "Solo un admin puede hacer esto",
+        "adminOnly": "Solo un admin può farlo",
         "manageBox": "Non gestiscis la Box de questo coworker",
-        "manageAny": "Gestisci una Box per añadir al Vault",
-        "paidAppEveryone": "Una app de pago se connetti coworker por coworker"
+        "manageAny": "Gestisci una Box per aggiungere al Vault",
+        "paidAppEveryone": "Un'app a pagamento si collega coworker per coworker",
+        "updateBox": "La macchina del tuo workspace potrà rinominare gli account dopo il prossimo aggiornamento"
     },
     "addPage": {
         "title": "Aggiungi al Vault",
@@ -54,30 +58,30 @@
         "secret": "Secreto"
     },
     "errors": {
-        "changeFailed": "Non è stato possibile salvar el cambio"
+        "changeFailed": "Impossibile salvare la modifica"
     },
     "addSecret": {
         "name": "Nome",
-        "namePlaceholder": "Clave live de Stripe",
+        "namePlaceholder": "Chiave live di Stripe",
         "variable": "Variable",
-        "variableHint": "Los coworkers la leen con este nome.",
-        "variableInvalid": "Letras, números y guiones bajos, senza empezar por un número",
+        "variableHint": "I coworker la leggono con questo nome.",
+        "variableInvalid": "Lettere, cifre e trattini bassi, senza iniziare con una cifra",
         "value": "Valor",
-        "valueHint": "Non se vuelve a mostrar nunca.",
+        "valueHint": "Non viene mai mostrato di nuovo.",
         "add": "Aggiungi secreto"
     },
     "addMcp": {
         "name": "Nome",
-        "namePlaceholder": "Docs de la empresa",
-        "target": "Dirección o comando",
-        "targetHint": "Una dirección https, o el comando que lanza la máquina.",
+        "namePlaceholder": "Documentazione aziendale",
+        "target": "Indirizzo o comando",
+        "targetHint": "Un indirizzo https, oppure il comando che la macchina avvia.",
         "header": "Cabecera",
         "headerValue": "Valor",
         "add": "Aggiungi server"
     },
     "paid": {
-        "badge": "De pago",
-        "managedInApp": "Su inicio de sesión, su slot y su factura se gestiscin en la ventana {provider} del menú Apps.",
+        "badge": "A pagamento",
+        "managedInApp": "Accesso, slot e fatturazione si gestiscono nella finestra {provider} del menu App.",
         "paused": "En pausa",
         "connecting": "Connettindo"
     }

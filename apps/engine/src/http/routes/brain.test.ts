@@ -28,6 +28,8 @@ async function proposal(content: string) {
         reason: 'New price',
         sources: [],
         baseHash: null,
+        tags: [],
+        spaceId: null,
         fingerprint: proposalFingerprint({ slug: 'pricing', content }),
     })
 }
@@ -122,5 +124,21 @@ describe('brain routes', () => {
     it('deletes a page', async () => {
         expect((await app.request('/brain/pages/company', { method: 'DELETE' })).status).toBe(200)
         expect((await app.request('/brain/pages/company', { method: 'DELETE' })).status).toBe(404)
+    })
+})
+
+describe('filing routes', () => {
+    it('files a page by hand and lists the filed files of the shared folder', async () => {
+        await app.request('/brain/pages/filed-page', json('PUT', { title: 'Filed', type: 'note', content: 'Hello.', sources: [], baseHash: null, author: 'user:theo' }))
+        const filed = await app.request('/brain/pages/filed-page/meta', json('PATCH', { tags: ['acme'], spaceId: 'box-sales' }))
+        expect(filed.status).toBe(200)
+        expect((await filed.json()).page).toMatchObject({ tags: ['acme'], spaceId: 'box-sales', createdBy: 'user:theo' })
+
+        const boxes = await app.request('/brain/agent-boxes', json('PUT', { boxes: { 'agent-1': 'box-sales' } }))
+        expect(boxes.status).toBe(200)
+
+        const files = await app.request('/brain/files/meta', json('PUT', { paths: ['nowhere.pdf'], tags: ['x'], spaceId: null, author: 'user:theo' }))
+        expect(await files.json()).toEqual({ files: [] })
+        expect((await app.request('/brain/files/meta', json('PUT', { paths: [] }))).status).toBe(400)
     })
 })

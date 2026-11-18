@@ -14,8 +14,8 @@
             "description": "La lingua che Rerun usa con te."
         },
         "desktop": {
-            "label": "App de escritorio",
-            "description": "Cómo funciona la app de Rerun en esta computadora."
+            "label": "App desktop",
+            "description": "Come si comporta l'app di Rerun su questo computer."
         },
         "delete": {
             "label": "Elimina account",

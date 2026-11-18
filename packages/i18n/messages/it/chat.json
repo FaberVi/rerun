@@ -161,7 +161,7 @@
         },
         "notes": {
             "saved": "Salvato. Ogni coworker lo legge dalla sua esecuzione successiva.",
-            "deleted": "No coworker lo legge più. La sua storia è conservata.",
+            "deleted": "Nessun coworker lo legge più. La cronologia viene conservata.",
             "accepted": "Salvato. Ogni coworker lo legge dalla sua esecuzione successiva.",
             "dismissed": "La pagina è invariata."
         },
@@ -220,7 +220,7 @@
         "sendFailed": "Impossibile inviare quella registrazione.",
         "sendFailedHint": "Riprova o eliminala.",
         "waitingForMicrophone": "In attesa del microfono...",
-        "microphone": "Micrófono...",
+        "microphone": "Microfono...",
         "transcribing": "Transcribiendo...",
         "hideTranscript": "Nascondi trascrizione",
         "transcript": "Trascrizione",
@@ -374,7 +374,7 @@
             "title": "Ricollega",
             "cta": "Ricollega",
             "description": "Accedi di nuovo alla connessione su cui gira questo coworker.",
-            "descriptionReplaceKey": "Pega la nueva clave en la conexión que usa questo coworker."
+            "descriptionReplaceKey": "Incolla la nuova chiave nella connessione su cui gira questo coworker."
         }
     },
     "budget": {
@@ -422,8 +422,8 @@
             "ownConnection": "Il piano a vita usa la tua IA e il piano {plan} è collegato.",
             "connectProvider": "Il piano a vita usa la tua IA. Collega Claude o ChatGPT per far continuare a lavorare i coworker.",
             "connectProviderWithClaude": "Il tuo piano lifetime funziona con la tua IA. Aggiungi una chiave API o collega Claude o ChatGPT per far continuare a lavorare i tuoi coworker.",
-            "apiKeyTitle": "Usar una clave de API",
-            "apiKeyDescription": "Anthropic, OpenAI, Google, OpenRouter o un endpoint personalizado.",
+            "apiKeyTitle": "Usa una chiave API",
+            "apiKeyDescription": "Anthropic, OpenAI, Google, OpenRouter o un endpoint personalizzato.",
             "apiKeyCta": "Aggiungi una clave",
             "body": "Il piano a vita usa la tua IA.",
             "connectTitle": "Collega la tua IA",
@@ -492,9 +492,12 @@
             "takeover": "Hai lasciato il browser al coworker"
         },
         "computer": {
-            "allowed": "Consentito su <computer></computer>",
-            "always": "Sempre consentito {rule} su <computer></computer>",
-            "denied": "Rifiutato su <computer></computer>"
+            "status": {
+                "allowed": "Consentito",
+                "always": "Sempre consentito",
+                "denied": "Rifiutato"
+            },
+            "screen": "Schermo, mouse e tastiera"
         }
     },
     "agentChat": {

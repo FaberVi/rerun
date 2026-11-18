@@ -37,7 +37,7 @@
         "emptyAutomations": "Ancora nessuna operazione automatizzata.",
         "running": "In corso",
         "startedBy": "Iniziato da {name}",
-        "moreFor": "Más opciones de {title}"
+        "moreFor": "Altre azioni per {title}"
     },
     "agentComputerThumbnail": {
         "working": "Al lavoro sul computer",
@@ -76,13 +76,13 @@
     },
     "openChatsTabs": {
         "closeTab": "Chiudi {title}",
-        "closeTabMenu": "Cerrar pestaña",
+        "closeTabMenu": "Chiudi scheda",
         "newThread": "Nuovo filo",
         "general": "Generale"
     },
     "sessionRename": {
         "rename": "Renombrar",
-        "label": "Nome de la conversazione",
+        "label": "Nome della conversazione",
         "failed": "Non è stato possibile renombrar. Riprova."
     },
     "threadBranch": {
@@ -124,14 +124,14 @@
         "requestHint": "Stai ancora cercando? Possiamo aggiungere l'app di cui hai bisogno.",
         "requestApp": "Richiedi un app",
         "vaultBadge": "Vault",
-        "fromVault": "Desde el Vault",
+        "fromVault": "Dal Vault",
         "vaultAdd": "Aggiungi",
-        "vaultShared": "Tutti los coworkers la reciben del Vault. Cámbiala allí.",
+        "vaultShared": "Ogni coworker la riceve dal Vault. Modificala da lì.",
         "vaultRemove": "Rimuovi {name} de questo coworker",
         "vaultRemoveConfirm": "Rimuovi {name} de questo coworker?",
-        "vaultRemoveDescription": "Sigue en el Vault, per los otros coworkers y per más adelante.",
+        "vaultRemoveDescription": "Resta nel Vault, per gli altri coworker e per dopo.",
         "vaultRemoveAction": "Rimuovi",
-        "vaultAttachFailed": "Non è stato possibile añadir {name}"
+        "vaultAttachFailed": "Impossibile aggiungere {name}"
     },
     "agentPanelMcp": {
         "unreachableTitle": "Motore non raggiungibile",
@@ -214,7 +214,7 @@
             },
             "allowSoulEdit": {
                 "label": "Modificare la propria anima",
-                "description": "Lascia che il coworker riscrivi la sua identità SOUL.md."
+                "description": "Permetti al coworker di riscrivere la propria identità in SOUL.md."
             },
             "autoMemory": {
                 "label": "Automemoria",
@@ -229,7 +229,7 @@
             },
             "shell": {
                 "label": "Eseguire comandi",
-                "blurb": "Eseguire comandi sulla sua macchina",
+                "blurb": "Esegue comandi sulla propria macchina",
                 "help": "Consente al coworker di eseguire comandi terminali per installare strumenti e automatizzare le attività."
             },
             "web": {
@@ -410,7 +410,7 @@
             "titleNew": "Nuovo compito",
             "history": "Storia",
             "name": "Nome",
-            "nameLockedHelper": "Il nome non può essere cambiato (imposta la slitta).",
+            "nameLockedHelper": "Il nome non può essere cambiato (determina lo slug).",
             "namePlaceholder": "Digerimento giornaliero",
             "description": "Designazione",
             "descriptionPlaceholder": "Riepilogo del mattino",
@@ -522,7 +522,7 @@
         "download": "Scarica l'abilità",
         "connectorManaged": "Questa abilità è fornita da un'app ed è gestita automaticamente.",
         "name": "Nome",
-        "nameLocked": "Il nome non può essere cambiato (imposta la slitta).",
+        "nameLocked": "Il nome non può essere cambiato (determina lo slug).",
         "namePlaceholder": "Ricerca web",
         "description": "Designazione",
         "descriptionPlaceholder": "Come ricercare un argomento",
@@ -755,7 +755,7 @@
             "backOnline": "{name} è tornato online",
             "inactive": "{name} è inattivo",
             "templateEnded": "L'abbonamento a questo coworker è terminato. Compra di nuovo il modello per riportarlo indietro.",
-            "nothingLost": "Niente è stato perso: i suoi ricordi, i file e le abilità sono ancora qui. Ha solo bisogno di una fessura del coworker libero per funzionare di nuovo.",
+            "nothingLost": "Non si è perso nulla: i suoi ricordi, i file e le skill sono ancora qui. Gli serve solo uno slot coworker libero per tornare a funzionare.",
             "fixedLimit": "Questo spazio di lavoro ha un limite di lavoro fisso. Contatta il supporto per alzarlo.",
             "upgradeToActivate": "Aggiornamento per attivare",
             "activeCount": "{active} di {max} coworker attivi",

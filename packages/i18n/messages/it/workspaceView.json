@@ -7,23 +7,23 @@
     "list": {
         "label": "Coworkers",
         "search": "Cerca",
-        "empty": "Aún non c'è coworkers",
+        "empty": "Ancora nessun coworker",
         "newBox": "Nuova Box",
         "emptyBox": "Nessun coworker",
         "boxMore": "Azioni per {name}"
     },
     "tile": {
-        "more": "Más per {name}",
-        "newConversation": "Nueva conversazione",
-        "allConversations": "Tutte las conversaciones",
-        "card": "Ficha del coworker",
-        "pin": "Fijar arriba",
+        "more": "Altre azioni per {name}",
+        "newConversation": "Nuova conversazione",
+        "allConversations": "Tutte le conversazioni",
+        "card": "Scheda del coworker",
+        "pin": "Fissa in alto",
         "unpin": "Desfijar"
     },
     "chat": {
-        "allConversations": "Tutte las conversaciones",
+        "allConversations": "Tutte le conversazioni",
         "pick": "Scegli un coworker a la izquierda.",
-        "card": "Ficha del coworker"
+        "card": "Scheda del coworker"
     },
     "line": {
         "paused": "En pausa",
@@ -37,16 +37,16 @@
     },
     "foreman": {
         "name": "Chief of Staff",
-        "line": "Domanda lo que quieras",
+        "line": "Chiedi qualsiasi cosa",
         "card": "Scheda Chief of Staff"
     },
     "details": {
-        "label": "Ficha de {name}"
+        "label": "Scheda di {name}"
     },
     "phone": {
         "pinned": "Fijados",
         "recent": "Recientes",
-        "byBox": "Por Box",
+        "byBox": "Per Box",
         "section": "{label}, {count}"
     }
 }

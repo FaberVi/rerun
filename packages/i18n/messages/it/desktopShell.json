@@ -1,57 +1,57 @@
 {
     "update": {
         "ready": "Rerun {version} è listo",
-        "description": "Reinicia la app per usar la nueva versión.",
+        "description": "Riavvia l'app per usare la nuova versione.",
         "restart": "Reiniciar"
     },
     "downloads": {
         "done": "{filename} descargado",
         "failed": "Non è stato possibile scarica {filename}",
-        "show": "Mostrar en la carpeta"
+        "show": "Mostra nella cartella"
     },
     "handoff": {
         "title": "Accedi en {app}",
-        "body": "Continua en {app} como {account}?",
+        "body": "Continuare su {app} come {account}?",
         "continue": "Continua",
-        "switchAccount": "Usar otra account",
-        "doneTitle": "Vuelve a {app}",
-        "doneBody": "{app} termina de iniciar sesión solo. Puoi cerrar esta pestaña.",
-        "codeHint": "Si {app} non se abrió, pega questo codice en la app:",
-        "copyCode": "Copiar el código",
-        "failed": "Non è stato possibile iniciar sesión en la app. Riprova.",
-        "invalidTitle": "Questo link caducó",
-        "invalidBody": "Vuelve a iniciar sesión da la app de escritorio."
+        "switchAccount": "Usa un altro account",
+        "doneTitle": "Torna su {app}",
+        "doneBody": "{app} completa l'accesso da solo. Puoi chiudere questa scheda.",
+        "codeHint": "Se {app} non si è aperta, incolla questo codice al suo interno:",
+        "copyCode": "Copia il codice",
+        "failed": "Impossibile far accedere l'app. Riprova.",
+        "invalidTitle": "Questo link è scaduto",
+        "invalidBody": "Riavvia l'accesso dall'app desktop."
     },
     "signIn": {
-        "waitingTitle": "Continúa en tu navegador",
-        "waitingBody": "Accedi en la ventana del navegador que se abrió y luego vuelve aquí.",
-        "reopen": "Abrir el navegador di nuovo",
-        "pasteCode": "Pegar un código en su lugar",
-        "codeLabel": "Código del navegador",
-        "submit": "Iniciar sesión",
-        "back": "Volver",
+        "waitingTitle": "Continua nel browser",
+        "waitingBody": "Accedi nella finestra del browser che si è aperta, poi torna qui.",
+        "reopen": "Riapri il browser",
+        "pasteCode": "Incolla invece un codice",
+        "codeLabel": "Codice dal browser",
+        "submit": "Accedi",
+        "back": "Indietro",
         "errors": {
-            "expired": "Questo codice caducó. Inizia di nuovo.",
+            "expired": "Questo codice è scaduto. Ricomincia.",
             "invalid": "Questo codice non è valido. Inizia di nuovo.",
-            "state-mismatch": "Este inicio de sesión se empezó da otra ventana. Inizia di nuovo.",
-            "network": "Non se puede connettir con Rerun. Controlla tu conexión.",
-            "cancelled": "Se canceló el inicio de sesión."
+            "state-mismatch": "Questo accesso è stato avviato da un'altra finestra. Ricomincia.",
+            "network": "Impossibile raggiungere Rerun. Controlla la connessione.",
+            "cancelled": "L'accesso è stato annullato."
         }
     },
     "settings": {
-        "openAtLogin": "Abrir al iniciar sesión",
-        "openAtLoginMac": "Rerun se inicia con tu Mac, en la barra de menús.",
-        "openAtLoginOther": "Rerun se inicia con tu computadora, en el área de notificación.",
-        "closeToTray": "Seguir funcionando al cerrar",
-        "closeToTrayHint": "Al cerrar la ventana, Rerun queda en el área de notificación y las notifiche siguen llegando.",
+        "openAtLogin": "Apri al login",
+        "openAtLoginMac": "Rerun si avvia con il Mac, nella barra dei menu.",
+        "openAtLoginOther": "Rerun si avvia con il computer, nell'area di notifica.",
+        "closeToTray": "Continua a funzionare quando è chiusa",
+        "closeToTrayHint": "Chiudendo la finestra, Rerun resta nell'area di notifica e le notifiche continuano ad arrivare.",
         "updates": "Actualizaciones",
         "version": "Rerun {version}",
-        "checking": "Buscando actualizaciones…",
-        "downloading": "Descaricamento la actualización… {percent} %",
+        "checking": "Ricerca di aggiornamenti…",
+        "downloading": "Download dell'aggiornamento… {percent}%",
         "updateFailed": "Non se pudieron cerca actualizaciones.",
         "check": "Cerca actualizaciones",
         "restart": "Reiniciar per actualizar a {version}",
-        "quickAsk": "Domanda rápida",
+        "quickAsk": "Domanda rapida",
         "quickAskHint": "{shortcut} apri un campo per tu Chief of Staff da cualquier app.",
         "quickAskOn": "Apre un campo per il tuo Chief of Staff da qualsiasi app.",
         "quickAskOff": "Disattivato. Registra una scorciatoia per attivarlo.",
@@ -69,12 +69,12 @@
         "quickAskVoiceOn": "Parla con il tuo Chief of Staff da qualsiasi app."
     },
     "openInApp": {
-        "title": "Abrir esta pagina en {app}?",
-        "open": "Abrir"
+        "title": "Aprire questa pagina in {app}?",
+        "open": "Apri"
     },
     "quickAsk": {
-        "placeholder": "Pregúntale a tu Chief of Staff…",
-        "hint": "Intro per enviar, Esc per cerrar",
+        "placeholder": "Chiedi al tuo Chief of Staff…",
+        "hint": "Invio per inviare, Esc per chiudere",
         "send": "Invia",
         "holdToTalk": "Tieni premuto <key>Spazio</key> per parlare",
         "releaseToSend": "Rilascia per inviare, Esc per annullare",
@@ -89,6 +89,6 @@
         "cancel": "Annulla"
     },
     "server": {
-        "otherServer": "Usar otro server de Rerun"
+        "otherServer": "Usa un altro server Rerun"
     }
 }
