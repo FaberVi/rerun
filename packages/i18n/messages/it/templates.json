@@ -557,5 +557,6 @@
         "lapsed": "Il tuo abbonamento è terminato. I coworkers installati da questo modello sono disabilitati.",
         "billedTo": "Fatturato a{workspace}. Il tuo piano Rerun è già attivo.",
         "yours": "Il tuo modello, senza alcun costo."
-    }
+    },
+    "boardAlt": "Board coworker {title}"
 }

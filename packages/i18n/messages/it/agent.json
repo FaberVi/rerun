@@ -139,7 +139,8 @@
         "new": "Nuovo",
         "emptyTitle": "Nessun server MCP",
         "emptyDescription": "I server MCP danno al tuo coworker strumenti extra oltre le app integrate. Aggiungere uno per estendere ciò che può fare.",
-        "appBadge": "App"
+        "appBadge": "App",
+        "count": "{count, plural, one {# server MCP} other {# server MCP}}"
     },
     "mcpOAuthAuthorize": {
         "discoveryFailed": "Discovery fallito",
@@ -344,7 +345,8 @@
         "emptyDescription": "Un trigger dà al tuo coworker un URL pubblico. Ogni volta che un altro servizio lo chiama, il coworker funziona con il carico di pagamento ricevuto.",
         "summary": "{methods} · {count, plural, one {# chiamata} other {# chiamate}}",
         "paused": "in pausa",
-        "neverCalled": "Mai chiamato"
+        "neverCalled": "Mai chiamato",
+        "count": "{count, plural, one {# trigger} other {# trigger}}"
     },
     "triggerEditor": {
         "saveFailed": "Impossibile salvare",
@@ -430,7 +432,8 @@
             "testRun": "Prova di corsa",
             "saveChanges": "Salvare le modifiche",
             "create": "Creare attività"
-        }
+        },
+        "count": "{count, plural, one {# attività pianificata} other {# attività pianificate}}"
     },
     "taskNotifyField": {
         "label": "Informatemi",
@@ -578,7 +581,8 @@
         "newSkill": "Nuovo",
         "emptyTitle": "Ancora nessuna abilità",
         "emptyDescription": "Le abilità sono le istruzioni passo per passo riutilizzabili che il tuo coworker impara, in modo da eseguire i compiti ricorrenti nello stesso modo ogni volta.",
-        "appBadge": "App"
+        "appBadge": "App",
+        "count": "{count, plural, one {# skill} other {# skill}}"
     },
     "shareAgentDialog": {
         "titleLink": "Il tuo link di condivisione",

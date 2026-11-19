@@ -14,7 +14,8 @@
         "protectedTitle": "Pagina protetta",
         "protectedDescription": "Condivisa da {workspace}. Accedi o conferma la tua email per aprirla.",
         "publishedBy": "Pubblicata da {agent} in {workspace}",
-        "publishedByUnknown": "Pubblicata da un coworker in {workspace}"
+        "publishedByUnknown": "Pubblicata da un coworker in {workspace}",
+        "untitled": "Pagina pubblicata"
     },
     "publishedAuth": {
         "metaTitle": "Apri una pagina",
@@ -47,5 +48,8 @@
             "subtitle": "Per i membri di {workspace}",
             "continue": "Continua con Rerun"
         }
+    },
+    "publishedSite": {
+        "notFound": "Non trovato"
     }
 }

@@ -212,5 +212,9 @@
     "dashboard": {
         "metaTitle": "Pannello di controllo",
         "metaDescription": "Le tue Boxes e i coworker su Rerun."
+    },
+    "site": {
+        "title": "Rerun | Fai svolgere le tue attività all'IA, anche mentre dormi",
+        "description": "Scegli un agente IA pronto all'uso dalla libreria o creane uno tuo, collega i tuoi strumenti e lavorerà 24/7 sulla tua macchina privata nel cloud. Prova gratuita di {trialDays} giorni."
     }
 }
