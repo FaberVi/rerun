@@ -3,7 +3,7 @@
 // page is watched and judged settled.
 
 import { execFileSync, spawn } from 'node:child_process'
-import { createWriteStream, existsSync, readFileSync } from 'node:fs'
+import { createWriteStream, existsSync, readFileSync, readlinkSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import { basename, dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -62,15 +62,34 @@ export function assertLocalProfile(stack) {
     if (configured !== stack.url) fail(`apps/ui/.env points at ${configured}, the running stack is ${stack.url}. Run \`pnpm cloud env:local\` again.`)
 }
 
+// The Linux devboxes have `ss` and `/proc` but no `lsof`.
+const HAS_LSOF = (() => {
+    try {
+        execFileSync('lsof', ['-v'], { stdio: 'ignore' })
+        return true
+    } catch (error) {
+        return error.code !== 'ENOENT'
+    }
+})()
+
 export function listeningPid(port) {
     try {
-        return execFileSync('lsof', ['-nP', '-t', `-iTCP:${port}`, '-sTCP:LISTEN'], { encoding: 'utf8' }).trim().split('\n')[0] || null
+        if (HAS_LSOF) return execFileSync('lsof', ['-nP', '-t', `-iTCP:${port}`, '-sTCP:LISTEN'], { encoding: 'utf8' }).trim().split('\n')[0] || null
+        const listening = execFileSync('ss', ['-ltnpH', `sport = :${port}`], { encoding: 'utf8' })
+        return listening.match(/pid=(\d+)/)?.[1] ?? (listening.trim() ? 'unknown' : null)
     } catch {
         return null
     }
 }
 
 export function processCwd(pid) {
+    if (!HAS_LSOF) {
+        try {
+            return readlinkSync(`/proc/${pid}/cwd`)
+        } catch {
+            return ''
+        }
+    }
     const out = execFileSync('lsof', ['-a', '-p', pid, '-d', 'cwd', '-Fn'], { encoding: 'utf8' })
     return out.split('\n').find((line) => line.startsWith('n'))?.slice(1) ?? ''
 }
@@ -139,18 +158,17 @@ export async function markOnboarded(admin, workspaceId) {
     if (error) fail(`Could not mark workspace ${workspaceId} onboarded: ${error.message}`)
 }
 
-export async function startEngine(base, apiKey, outDir) {
+export async function startEngine(base, apiKey, outDir, dataDir = join(REPO_ROOT, '.context/verify/engine-data')) {
     if (listeningPid(ENGINE_PORT)) fail(`Port ${ENGINE_PORT} is already taken, the local engine needs it.`)
     log(`Starting the engine on port ${ENGINE_PORT}.`)
-    const env = { ...process.env, RERUN_PORT: String(ENGINE_PORT), RERUN_HOST: '127.0.0.1', RERUN_API_KEY: apiKey, RERUN_HUB_BASE_URL: base, RERUN_DATA_DIR: join(REPO_ROOT, '.context/verify/engine-data') }
+    const env = { ...process.env, RERUN_PORT: String(ENGINE_PORT), RERUN_HOST: '127.0.0.1', RERUN_API_KEY: apiKey, RERUN_HUB_BASE_URL: base, RERUN_DATA_DIR: dataDir }
     const engine = spawnLogged('pnpm', ['--filter', 'rerun-engine', 'dev'], { cwd: REPO_ROOT, env }, join(outDir, 'engine.log'))
     await waitFor(`http://127.0.0.1:${ENGINE_PORT}/health`)
     return engine
 }
 
-export async function testAccount(stack, { fresh }) {
+export async function testAccount(stack, { fresh, email = `verify-${WORKSPACE_NAME}@rerun.local` }) {
     const admin = createClient(stack.url, stack.secretKey, { auth: { persistSession: false } })
-    const email = `verify-${WORKSPACE_NAME}@rerun.local`
     if (fresh) await deleteTestAccount(admin, email)
     const created = await admin.auth.admin.createUser({ email, email_confirm: true })
     if (created.error && !/already/i.test(created.error.message)) fail(`Could not create ${email}: ${created.error.message}`)
@@ -186,10 +204,20 @@ export async function signIn(context, base, account) {
 
 // Spends the account's magic link in a page already open (a browser tab, the desktop app's window).
 export async function signInPage(page, base, account) {
-    await page.goto(`${base}/auth/confirm?token_hash=${account.tokenHash}&type=magiclink`)
-    // The confirm page is in the browser's language: its one submit button, whatever it says.
-    await page.locator('form button[type="submit"]').first().click()
-    await page.waitForURL((url) => !url.pathname.startsWith('/auth'), { timeout: 60_000 })
+    // A cold `next dev` compiles the page on this first visit, past the default 30 seconds.
+    await page.goto(`${base}/auth/confirm?token_hash=${account.tokenHash}&type=magiclink`, { timeout: 180_000 })
+    // The confirm page is in the browser's language: the submit button of the form that carries the
+    // token, whatever it says. The onboarding layout around it has a form of its own.
+    // On a `next dev` still compiling, the page can come up without its form: one reload brings it,
+    // and the token is still unspent since only the click spends it.
+    const confirm = page.locator('form:has(input[name="token_hash"]) button[type="submit"]')
+    try {
+        await confirm.click({ timeout: 60_000 })
+    } catch {
+        await page.reload({ timeout: 180_000 })
+        await confirm.click({ timeout: 120_000 })
+    }
+    await page.waitForURL((url) => !url.pathname.startsWith('/auth'), { timeout: 180_000 })
     await skipPhoneStep(account.admin, account.userId)
 }
 
